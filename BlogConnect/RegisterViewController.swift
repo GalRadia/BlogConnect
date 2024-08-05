@@ -6,6 +6,8 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
+import FirebaseFirestore
 class RegisterViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,8 @@ class RegisterViewController: UIViewController{
                             strongSelf.showAlertWithOk(title: "Registeration error", message: error.localizedDescription, okAction: nil)
 
                         }else{
+                            var ref:DatabaseReference!
+                            ref = Database.database().reference()
                             SceneDelegate.showHome()
                         }
                     })
