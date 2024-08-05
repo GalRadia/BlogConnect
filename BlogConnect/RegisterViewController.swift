@@ -38,8 +38,12 @@ class RegisterViewController: UIViewController{
                             strongSelf.showAlertWithOk(title: "Registeration error", message: error.localizedDescription, okAction: nil)
 
                         }else{
-                            var ref:DatabaseReference!
-                            ref = Database.database().reference()
+                            
+                            var currentUser = Auth.auth().currentUser
+                            let user = User(uid: currentUser!.uid, username: currentUser!.displayName!, email: currentUser!.email!)
+                            self!.saveUserToDatabase(user:user)
+                            
+                            
                             SceneDelegate.showHome()
                         }
                     })
@@ -53,5 +57,29 @@ class RegisterViewController: UIViewController{
     }
     @IBAction func cancelClicked (_sender:Any){
         self.navigationController?.popViewController(animated: true)
+    }
+    // Save the User to the database
+    func saveUserToDatabase(user: User) {
+        var ref:DatabaseReference!
+        ref = Database.database().reference()
+        guard let currentUser = Auth.auth().currentUser else {
+                print("No current user is authenticated")
+                return
+            }
+
+            // Define the path where the user data will be stored
+            let userReference = ref.child("users").child(currentUser.uid)
+            
+            // Convert the User object to a dictionary
+            let userDict = user.toDictionary()
+
+            // Save the user data to the database
+            userReference.setValue(userDict) { error, _ in
+                if let error = error {
+                    print("Error saving user data: \(error.localizedDescription)")
+                } else {
+                    print("User data successfully saved!")
+                }
+            }
     }
 }
