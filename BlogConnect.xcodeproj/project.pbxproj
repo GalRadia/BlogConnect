@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EF6231AE2C5E1A0300125F38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6231AD2C5E1A0300125F38 /* AppDelegate.swift */; };
 		EF6231B02C5E1A0300125F38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6231AF2C5E1A0300125F38 /* SceneDelegate.swift */; };
-		EF6231B22C5E1A0300125F38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6231B12C5E1A0300125F38 /* ViewController.swift */; };
 		EF6231B52C5E1A0300125F38 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EF6231B42C5E1A0300125F38 /* Base */; };
 		EF6231B72C5E1A0400125F38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6231B62C5E1A0400125F38 /* Assets.xcassets */; };
 		EF6231BA2C5E1A0400125F38 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EF6231B92C5E1A0400125F38 /* Base */; };
@@ -19,18 +18,18 @@
 		EF6231CF2C5E224E00125F38 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6231CE2C5E224E00125F38 /* LoginViewController.swift */; };
 		EF6231D52C5E2E9400125F38 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6231D42C5E2E9400125F38 /* HomeViewController.swift */; };
 		EF6231D72C5E2FBF00125F38 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6231D62C5E2FBF00125F38 /* RegisterViewController.swift */; };
+		EFF2FF4A2C66123F00E19C55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFF2FF492C66123F00E19C55 /* GoogleService-Info.plist */; };
+		EFF2FF4C2C6616A500E19C55 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EFF2FF4B2C6616A500E19C55 /* FirebaseFirestore */; };
 		FB0FF4752C60D04A0055ADE1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FB0FF4742C60D04A0055ADE1 /* FirebaseFirestore */; };
 		FB0FF4772C60D1C00055ADE1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FB0FF4762C60D1C00055ADE1 /* FirebaseFirestore */; };
 		FB419D0C2C60E682009BB00B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB419D0B2C60E682009BB00B /* User.swift */; };
 		FB419D0E2C60E6F8009BB00B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB419D0D2C60E6F8009BB00B /* Post.swift */; };
-		FB419D112C60ED41009BB00B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB419D102C60ED41009BB00B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EF6231AA2C5E1A0300125F38 /* BlogConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlogConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6231AD2C5E1A0300125F38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF6231AF2C5E1A0300125F38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EF6231B12C5E1A0300125F38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EF6231B42C5E1A0300125F38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF6231B62C5E1A0400125F38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF6231B92C5E1A0400125F38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,9 +37,9 @@
 		EF6231CE2C5E224E00125F38 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EF6231D42C5E2E9400125F38 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EF6231D62C5E2FBF00125F38 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		EFF2FF492C66123F00E19C55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB419D0B2C60E682009BB00B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FB419D0D2C60E6F8009BB00B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		FB419D102C60ED41009BB00B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +52,7 @@
 				EF6231C52C5E1E3800125F38 /* FirebaseAnalytics in Frameworks */,
 				FB0FF4772C60D1C00055ADE1 /* FirebaseFirestore in Frameworks */,
 				EF6231C72C5E1E3800125F38 /* FirebaseAuth in Frameworks */,
+				EFF2FF4C2C6616A500E19C55 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,10 +78,9 @@
 		EF6231AC2C5E1A0300125F38 /* BlogConnect */ = {
 			isa = PBXGroup;
 			children = (
-				FB419D102C60ED41009BB00B /* GoogleService-Info.plist */,
+				EFF2FF492C66123F00E19C55 /* GoogleService-Info.plist */,
 				EF6231AD2C5E1A0300125F38 /* AppDelegate.swift */,
 				EF6231AF2C5E1A0300125F38 /* SceneDelegate.swift */,
-				EF6231B12C5E1A0300125F38 /* ViewController.swift */,
 				EF6231B32C5E1A0300125F38 /* Main.storyboard */,
 				EF6231B62C5E1A0400125F38 /* Assets.xcassets */,
 				EF6231B82C5E1A0400125F38 /* LaunchScreen.storyboard */,
@@ -125,6 +124,7 @@
 				EF6231C82C5E1E3800125F38 /* FirebaseDatabase */,
 				FB0FF4742C60D04A0055ADE1 /* FirebaseFirestore */,
 				FB0FF4762C60D1C00055ADE1 /* FirebaseFirestore */,
+				EFF2FF4B2C6616A500E19C55 /* FirebaseFirestore */,
 			);
 			productName = BlogConnect;
 			productReference = EF6231AA2C5E1A0300125F38 /* BlogConnect.app */;
@@ -172,7 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF6231B72C5E1A0400125F38 /* Assets.xcassets in Resources */,
-				FB419D112C60ED41009BB00B /* GoogleService-Info.plist in Resources */,
+				EFF2FF4A2C66123F00E19C55 /* GoogleService-Info.plist in Resources */,
 				EF6231BA2C5E1A0400125F38 /* Base in Resources */,
 				EF6231B52C5E1A0300125F38 /* Base in Resources */,
 			);
@@ -187,7 +187,6 @@
 			files = (
 				EF6231D52C5E2E9400125F38 /* HomeViewController.swift in Sources */,
 				EF6231CF2C5E224E00125F38 /* LoginViewController.swift in Sources */,
-				EF6231B22C5E1A0300125F38 /* ViewController.swift in Sources */,
 				FB419D0E2C60E6F8009BB00B /* Post.swift in Sources */,
 				EF6231D72C5E2FBF00125F38 /* RegisterViewController.swift in Sources */,
 				EF6231AE2C5E1A0300125F38 /* AppDelegate.swift in Sources */,
@@ -444,6 +443,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EF6231C32C5E1E3800125F38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
+		};
+		EFF2FF4B2C6616A500E19C55 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF6231C32C5E1E3800125F38 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 		FB0FF4742C60D04A0055ADE1 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;

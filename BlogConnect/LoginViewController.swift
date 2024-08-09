@@ -37,6 +37,13 @@ class LoginViewController: UIViewController{
             
         }
     }
+    @IBAction func SignUpClicked(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "signUp")
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc,animated: true)
+    }
+    
 }
 extension UIViewController{
     func showAlertWithOk(title: String, message: String, okAction:((UIAlertAction)-> Void)?){

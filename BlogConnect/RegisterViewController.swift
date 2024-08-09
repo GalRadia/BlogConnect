@@ -25,7 +25,7 @@ class RegisterViewController: UIViewController{
             showAlertWithOk(title: "Register Error", message: "Please enter valid name/email/password", okAction: nil)
         }
         else{
-            Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+            Auth.auth().createUser(withEmail: email, password: password) { [weak self] authResult, error in
               guard let strongSelf = self else { return }
               // ...
                 if error == nil{
@@ -39,7 +39,7 @@ class RegisterViewController: UIViewController{
 
                         }else{
                             
-                            var currentUser = Auth.auth().currentUser
+                            let currentUser = Auth.auth().currentUser
                             let user = User(uid: currentUser!.uid, username: currentUser!.displayName!, email: currentUser!.email!)
                             self!.saveUserToDatabase(user:user)
                             
@@ -50,14 +50,14 @@ class RegisterViewController: UIViewController{
                 }
                 else{
                     strongSelf.showAlertWithOk(title: "Registeration error", message: error!.localizedDescription, okAction: nil)
-                    print(error?.localizedDescription)
+                    print(error?.localizedDescription as Any)
                 }
             }
         }
     }
-    @IBAction func cancelClicked (_sender:Any){
-        self.navigationController?.popViewController(animated: true)
-    }
+//    @IBAction func cancelClicked (_sender:Any){
+//        self.navigationController?.popViewController(animated: true)
+//    }
     // Save the User to the database
     func saveUserToDatabase(user: User) {
         var ref:DatabaseReference!
