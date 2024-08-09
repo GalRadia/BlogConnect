@@ -19,25 +19,16 @@ enum Category: String {
 // Define the Post class
 class Post {
     var description: String
-    var rate: Double
-    var categories: [Category]
+    var rate: Int
+    var categories: Category
+    var id :UUID
 
-    init(description: String, rate: Double, categories: [Category] = []) {
+    init(description: String, rate: Int, categories: Category) {
+        self.id = UUID()
         self.description = description
         self.rate = rate
         self.categories = categories
     }
 
-    func addCategory(_ category: Category) {
-        if !categories.contains(category) {
-            categories.append(category)
-        }
-    }
-
-    func removeCategory(_ category: Category) {
-        if let index = categories.firstIndex(of: category) {
-            categories.remove(at: index)
-        }
-    }
 
 }
