@@ -10,13 +10,11 @@ import Foundation
 class User {
     var uid: String
     var username: String
-    var email: String
     var postsIDs: [String]
 
-    init(uid: String, username: String, email: String, postsIDs: [String] = []) {
+    init(uid: String, username: String, postsIDs: [String] = []) {
         self.uid = uid
         self.username = username
-        self.email = email
         self.postsIDs = postsIDs
     }
     // Convert User object to dictionary
@@ -24,7 +22,6 @@ class User {
            return [
                "uid": uid,
                "username": username,
-               "email": email,
                "postIDs": postsIDs
            ]
        }
@@ -40,6 +37,6 @@ class User {
     }
 
     func description() -> String {
-        return "User(uid: \(uid), username: \(username), email: \(email), eventIDs: \(postsIDs))"
+        return "User(uid: \(uid), username: \(username), eventIDs: \(postsIDs))"
     }
 }

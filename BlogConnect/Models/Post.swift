@@ -9,26 +9,32 @@ import Foundation
 
 // Define the enum for categories
 enum Category: String {
-    case cooking
-    case news
-    case leisure
-    case adventure
+    case Cooking
+    case News
+    case Leisure
+    case Adventure
     // Add other categories as needed
 }
 
 // Define the Post class
 class Post {
     var description: String
-    var rate: Int
-    var categories: Category
+    var categorie: Category
     var id :UUID
 
-    init(description: String, rate: Int, categories: Category) {
+    init(description: String, categorie: Category) {
         self.id = UUID()
         self.description = description
-        self.rate = rate
-        self.categories = categories
+        self.categorie = categorie
     }
+    // Convert User object to dictionary
+       func toDictionary() -> [String: Any] {
+           return [
+               "description": description,
+               "categories": categorie.rawValue,
+               "id": id.uuidString
+           ]
+       }
 
 
 }

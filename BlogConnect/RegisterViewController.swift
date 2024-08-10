@@ -40,7 +40,7 @@ class RegisterViewController: UIViewController{
                         }else{
                             
                             let currentUser = Auth.auth().currentUser
-                            let user = User(uid: currentUser!.uid, username: currentUser!.displayName!, email: currentUser!.email!)
+                            let user = User(uid: currentUser!.uid, username: currentUser!.displayName!)
                             self!.saveUserToDatabase(user:user)
                             
                             
