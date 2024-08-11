@@ -62,7 +62,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     static func showHome(){
         let sceneDelegate = UIApplication.shared.connectedScenes.first!.delegate as! SceneDelegate
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "HomeVC")
+        let vc = storyboard.instantiateViewController(withIdentifier: "ControllerVC")
         sceneDelegate.window?.rootViewController = vc
         sceneDelegate.window?.makeKeyAndVisible()
     }

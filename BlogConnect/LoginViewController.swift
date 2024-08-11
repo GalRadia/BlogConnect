@@ -44,10 +44,7 @@ class LoginViewController: UIViewController{
         }
     }
     @IBAction func SignUpClicked(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "signUp")
-        vc.modalPresentationStyle = .overFullScreen
-        present(vc,animated: true)
+       
     }
     
     @IBAction func GoogleSignInClicked(_ sender: Any) {

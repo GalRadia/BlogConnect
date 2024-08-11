@@ -42,8 +42,10 @@ class HomeViewController: UIViewController{
             return
         }
         
-        let post = Post(description: descTextField.text ?? "", categorie: category)
-        
+        let post = Post(title: titleTextField.text ?? "",
+                        description: descTextField.text ?? "",
+                        category: category,
+                        userName: currentUser.displayName ?? "Anonymous")
         // Save post ID to the user's reference
         userReference.child("postID").childByAutoId().setValue(post.id.uuidString) { error, _ in
             if let error = error {

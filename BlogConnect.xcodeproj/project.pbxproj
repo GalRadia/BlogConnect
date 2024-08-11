@@ -21,11 +21,14 @@
 		EF79556B2C675CE400B7C52A /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = EF79556A2C675CE400B7C52A /* GoogleSignIn */; };
 		EF79556D2C675CE400B7C52A /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EF79556C2C675CE400B7C52A /* GoogleSignInSwift */; };
 		EF7955712C67942200B7C52A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF7955702C67942200B7C52A /* GoogleService-Info.plist */; };
+		EF9CAC462C692FB80063168D /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9CAC432C692FB80063168D /* HomePageViewController.swift */; };
+		EF9CAC472C692FB80063168D /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9CAC442C692FB80063168D /* MyProfileViewController.swift */; };
+		EF9CAC482C692FB80063168D /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9CAC452C692FB80063168D /* PostsTableViewCell.swift */; };
+		EF9CAC4A2C692FC80063168D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9CAC492C692FC80063168D /* Post.swift */; };
 		EFF2FF4C2C6616A500E19C55 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EFF2FF4B2C6616A500E19C55 /* FirebaseFirestore */; };
 		FB0FF4752C60D04A0055ADE1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FB0FF4742C60D04A0055ADE1 /* FirebaseFirestore */; };
 		FB0FF4772C60D1C00055ADE1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FB0FF4762C60D1C00055ADE1 /* FirebaseFirestore */; };
 		FB419D0C2C60E682009BB00B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB419D0B2C60E682009BB00B /* User.swift */; };
-		FB419D0E2C60E6F8009BB00B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB419D0D2C60E6F8009BB00B /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +43,11 @@
 		EF6231D42C5E2E9400125F38 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EF6231D62C5E2FBF00125F38 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		EF7955702C67942200B7C52A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EF9CAC432C692FB80063168D /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePageViewController.swift; path = "../../BlogConnect 2/BlogConnect/HomePageViewController.swift"; sourceTree = "<group>"; };
+		EF9CAC442C692FB80063168D /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyProfileViewController.swift; path = "../../BlogConnect 2/BlogConnect/MyProfileViewController.swift"; sourceTree = "<group>"; };
+		EF9CAC452C692FB80063168D /* PostsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostsTableViewCell.swift; path = "../../BlogConnect 2/BlogConnect/PostsTableViewCell.swift"; sourceTree = "<group>"; };
+		EF9CAC492C692FC80063168D /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = "../../../BlogConnect 2/BlogConnect/Models/Post.swift"; sourceTree = "<group>"; };
 		FB419D0B2C60E682009BB00B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		FB419D0D2C60E6F8009BB00B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,9 @@
 				EF6231CE2C5E224E00125F38 /* LoginViewController.swift */,
 				EF6231D42C5E2E9400125F38 /* HomeViewController.swift */,
 				EF6231D62C5E2FBF00125F38 /* RegisterViewController.swift */,
+				EF9CAC432C692FB80063168D /* HomePageViewController.swift */,
+				EF9CAC442C692FB80063168D /* MyProfileViewController.swift */,
+				EF9CAC452C692FB80063168D /* PostsTableViewCell.swift */,
 				FB419D0F2C60E813009BB00B /* Models */,
 			);
 			path = BlogConnect;
@@ -100,7 +109,7 @@
 		FB419D0F2C60E813009BB00B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FB419D0D2C60E6F8009BB00B /* Post.swift */,
+				EF9CAC492C692FC80063168D /* Post.swift */,
 				FB419D0B2C60E682009BB00B /* User.swift */,
 			);
 			path = Models;
@@ -193,10 +202,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF6231D52C5E2E9400125F38 /* HomeViewController.swift in Sources */,
+				EF9CAC4A2C692FC80063168D /* Post.swift in Sources */,
 				EF6231CF2C5E224E00125F38 /* LoginViewController.swift in Sources */,
-				FB419D0E2C60E6F8009BB00B /* Post.swift in Sources */,
+				EF9CAC472C692FB80063168D /* MyProfileViewController.swift in Sources */,
 				EF6231D72C5E2FBF00125F38 /* RegisterViewController.swift in Sources */,
+				EF9CAC462C692FB80063168D /* HomePageViewController.swift in Sources */,
 				EF6231AE2C5E1A0300125F38 /* AppDelegate.swift in Sources */,
+				EF9CAC482C692FB80063168D /* PostsTableViewCell.swift in Sources */,
 				EF6231B02C5E1A0300125F38 /* SceneDelegate.swift in Sources */,
 				FB419D0C2C60E682009BB00B /* User.swift in Sources */,
 			);
@@ -348,6 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Dont't Code Sign";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -377,6 +390,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Dont't Code Sign";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
