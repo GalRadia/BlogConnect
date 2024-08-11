@@ -12,7 +12,7 @@
         <!--Login-->
         <scene sceneID="cmZ-hU-2nI">
             <objects>
-                <viewController storyboardIdentifier="LoginVC" title="Login" id="b5B-gY-Yq4" customClass="LoginViewController" customModule="BlogConnect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="b5B-gY-Yq4" customClass="LoginViewController" customModule="BlogConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VyW-su-r2j">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,7 +154,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Njg-Rh-7sn">
             <objects>
-                <navigationController id="Cny-MC-iIt" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginVC" id="Cny-MC-iIt" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WVM-U3-J5n">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -656,7 +656,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIe-8s-tAb">
                                 <rect key="frame" x="25" y="724.66666666666663" width="78" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Logout"/>
                                 <connections>
                                     <action selector="logoutButtonTapped:" destination="eIX-P7-mey" eventType="touchUpInside" id="nTH-1n-5n0"/>
                                 </connections>

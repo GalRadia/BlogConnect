@@ -73,19 +73,11 @@ class MyProfileViewController: UIViewController, UITableViewDelegate, UITableVie
                 try Auth.auth().signOut()
                 
                 // Perform the segue to the LoginViewController
-                performSegue(withIdentifier: "logoutSegue", sender: self)
+                SceneDelegate.showLogin()
             } catch let signOutError as NSError {
                 print("Error signing out: %@", signOutError)
             }
         }
         
-        // Prepare for the segue (optional, if you need to pass data)
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "logout" {
-                // Prepare anything you need for the LoginViewController
-                if let loginVC = segue.destination as? LoginViewController {
-                    // Pass any required data to the loginVC here
-                }
-            }
-        }
+   
     }
