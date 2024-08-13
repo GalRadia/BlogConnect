@@ -18,14 +18,19 @@ class PostsTableViewCell: UITableViewCell {
            // Configure the cell's UI elements
            titleLBL.font = UIFont.boldSystemFont(ofSize: 18)
            descrLBL.numberOfLines = 0
+           self.contentView.layer.cornerRadius = 10
+           self.contentView.layer.masksToBounds = true
        }
 
-       // Called when the cell's selection state changes
-       override func setSelected(_ selected: Bool, animated: Bool) {
-           super.setSelected(selected, animated: animated)
-           // Change the background color based on selection
-           contentView.backgroundColor = selected ? UIColor.lightGray : UIColor.white
-       }
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        if selected {
+            contentView.backgroundColor = UIColor.lightGray
+        } else {
+            contentView.backgroundColor = contentView.backgroundColor
+        }
+    }
+
 
        // Method to configure the cell with a Post object
        func configure(with post: Post) {

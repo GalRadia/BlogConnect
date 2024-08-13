@@ -332,13 +332,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" tag="4" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZQO-M9-ShC">
+                            <segmentedControl opaque="NO" tag="4" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZQO-M9-ShC">
                                 <rect key="frame" x="33" y="523" width="327" height="32"/>
                                 <segments>
-                                    <segment title="Cooking"/>
                                     <segment title="News"/>
                                     <segment title="Leisure"/>
                                     <segment title="Adventure"/>
+                                    <segment title="Cooking"/>
                                 </segments>
                             </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" adjustsFontForContentSizeCategory="YES" layoutManager="textKit1" translatesAutoresizingMaskIntoConstraints="NO" id="XXC-kd-SRo">
@@ -391,7 +391,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ah7-XP-Ye3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.53435114503816" y="-680.28169014084506"/>
+            <point key="canvasLocation" x="-384" y="-764"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ilU-kB-MVe">
@@ -403,9 +403,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="eIX-P7-mey" kind="relationship" relationship="viewControllers" id="a6H-Qu-hN9"/>
-                        <segue destination="LmS-hh-Y66" kind="relationship" relationship="viewControllers" id="MVK-8D-6E0"/>
-                        <segue destination="Rll-vV-Xhb" kind="relationship" relationship="viewControllers" id="jrI-hc-Uyn"/>
+                        <segue destination="Rll-vV-Xhb" kind="relationship" relationship="viewControllers" id="u5A-tW-2pZ"/>
+                        <segue destination="LmS-hh-Y66" kind="relationship" relationship="viewControllers" id="jPD-cf-mnC"/>
+                        <segue destination="eIX-P7-mey" kind="relationship" relationship="viewControllers" id="gQG-8t-h4Z"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t1C-4W-nf7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -432,14 +432,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" tag="4" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vp7-Be-efS">
+                            <segmentedControl opaque="NO" tag="4" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vp7-Be-efS">
                                 <rect key="frame" x="37" y="161" width="327" height="32"/>
                                 <segments>
-                                    <segment title="Cooking"/>
+                                    <segment title="All"/>
                                     <segment title="News"/>
                                     <segment title="Leisure"/>
                                     <segment title="Adventure"/>
-                                    <segment title="All"/>
+                                    <segment title="Cooking"/>
                                 </segments>
                                 <connections>
                                     <action selector="categoryChanged:" destination="Rll-vV-Xhb" eventType="valueChanged" id="y0B-yi-LvN"/>
@@ -493,6 +493,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" systemColor="separatorColor"/>
                                             <constraints>
                                                 <constraint firstItem="LlX-bn-fIQ" firstAttribute="trailing" secondItem="ZsX-0D-RLK" secondAttribute="trailing" id="0gy-aH-2gc"/>
                                                 <constraint firstItem="LlX-bn-fIQ" firstAttribute="top" secondItem="qAB-Io-lbi" secondAttribute="topMargin" id="8F3-dy-TyW"/>
@@ -509,6 +510,12 @@
                                                 <constraint firstItem="ZsX-0D-RLK" firstAttribute="trailing" secondItem="ndW-4y-vTX" secondAttribute="trailing" id="vT2-Qt-1d2"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="descrLBL" destination="JC7-n2-0hm" id="Ug4-xZ-RkS"/>
                                             <outlet property="tagsLBL" destination="ndW-4y-vTX" id="ZOD-YB-5YF"/>
@@ -518,42 +525,21 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFw-Rl-2vh">
-                                <rect key="frame" x="14" y="757" width="100" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="My Profile"/>
-                                <connections>
-                                    <action selector="goToProfile:" destination="Rll-vV-Xhb" eventType="touchUpInside" id="Aqe-8B-u5w"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Sy-ze-q42">
-                                <rect key="frame" x="232" y="757" width="132" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Add New Post"/>
-                                <connections>
-                                    <action selector="addNewPost:" destination="Rll-vV-Xhb" eventType="touchUpInside" id="kvB-ns-pY8"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3tz-vZ-vFn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="q2D-Hq-gow" firstAttribute="leading" secondItem="3tz-vZ-vFn" secondAttribute="leading" constant="37" id="1NY-Yc-h1e"/>
-                            <constraint firstItem="LFw-Rl-2vh" firstAttribute="baseline" secondItem="7Sy-ze-q42" secondAttribute="baseline" id="3oX-ae-PAX"/>
                             <constraint firstItem="3tz-vZ-vFn" firstAttribute="trailing" secondItem="Vp7-Be-efS" secondAttribute="trailing" constant="29" id="98j-Tw-I01"/>
                             <constraint firstItem="1ek-Jq-48y" firstAttribute="centerX" secondItem="zb3-q1-UDR" secondAttribute="centerX" id="9Df-NK-xFS"/>
                             <constraint firstItem="1ek-Jq-48y" firstAttribute="top" secondItem="3tz-vZ-vFn" secondAttribute="top" id="HHd-P1-4In"/>
-                            <constraint firstItem="LFw-Rl-2vh" firstAttribute="top" secondItem="zb3-q1-UDR" secondAttribute="bottom" constant="49" id="Kc8-Ag-bGV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zb3-q1-UDR" secondAttribute="trailing" constant="10" id="P1r-QY-tRL"/>
                             <constraint firstItem="zb3-q1-UDR" firstAttribute="top" secondItem="Vp7-Be-efS" secondAttribute="bottom" constant="16" id="QWe-ua-fhK"/>
                             <constraint firstItem="Vp7-Be-efS" firstAttribute="top" secondItem="q2D-Hq-gow" secondAttribute="bottom" constant="8" id="VIH-kC-2ua"/>
-                            <constraint firstItem="7Sy-ze-q42" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LFw-Rl-2vh" secondAttribute="trailing" constant="8" symbolic="YES" id="aPW-Ro-PbL"/>
                             <constraint firstItem="zb3-q1-UDR" firstAttribute="leading" secondItem="Y7c-FO-qxX" secondAttribute="leadingMargin" constant="10" id="eRT-q2-DNv"/>
                             <constraint firstItem="q2D-Hq-gow" firstAttribute="top" secondItem="1ek-Jq-48y" secondAttribute="bottom" constant="37" id="f8k-OZ-9zv"/>
                             <constraint firstItem="3tz-vZ-vFn" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="q2D-Hq-gow" secondAttribute="trailing" symbolic="YES" id="fot-oT-qSb"/>
                             <constraint firstItem="q2D-Hq-gow" firstAttribute="leading" secondItem="Vp7-Be-efS" secondAttribute="leading" id="hYx-Wo-5Dc"/>
-                            <constraint firstItem="LFw-Rl-2vh" firstAttribute="leading" secondItem="3tz-vZ-vFn" secondAttribute="leading" constant="14" id="mbD-WL-g7c"/>
-                            <constraint firstItem="7Sy-ze-q42" firstAttribute="trailing" secondItem="Vp7-Be-efS" secondAttribute="trailing" id="zUJ-bG-7QE"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="All Posts" image="newspaper" catalog="system" selectedImage="newspaper" id="to1-gp-3BM"/>
@@ -564,7 +550,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fj3-u9-Uwo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1074" y="-680"/>
+            <point key="canvasLocation" x="-1476" y="-752"/>
         </scene>
         <!--MyProfile-->
         <scene sceneID="cnv-Da-zy6">
@@ -628,6 +614,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" systemColor="separatorColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Z3H-Xo-KSi" secondAttribute="bottom" constant="-11" id="0sY-lg-EpP"/>
                                                 <constraint firstItem="q9M-uC-1zN" firstAttribute="trailing" secondItem="0ZG-6K-CTj" secondAttribute="trailingMargin" id="89I-Gt-Anb"/>
@@ -644,6 +631,12 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="Z3H-Xo-KSi" secondAttribute="trailing" constant="-20" id="pYb-Mp-L8d"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="descrLBL" destination="Z3H-Xo-KSi" id="Xiq-J0-EBT"/>
                                             <outlet property="tagsLBL" destination="QZb-RH-03f" id="Bbe-02-tHo"/>
@@ -662,7 +655,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My posts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cv4-ap-WK9">
-                                <rect key="frame" x="25.999999999999993" y="126.66666666666669" width="106.33333333333331" height="30"/>
+                                <rect key="frame" x="24.999999999999993" y="167" width="106.33333333333331" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -673,12 +666,12 @@
                         <constraints>
                             <constraint firstItem="enU-7S-r8d" firstAttribute="leading" secondItem="ndv-IY-YMk" secondAttribute="leading" constant="26" id="0jj-ol-7ll"/>
                             <constraint firstItem="EoS-ds-vmj" firstAttribute="leading" secondItem="ndv-IY-YMk" secondAttribute="leading" constant="127" id="9lK-5V-6NL"/>
-                            <constraint firstItem="enU-7S-r8d" firstAttribute="top" secondItem="Cv4-ap-WK9" secondAttribute="bottom" constant="60" id="Bkv-S2-vBZ"/>
+                            <constraint firstItem="enU-7S-r8d" firstAttribute="top" secondItem="Cv4-ap-WK9" secondAttribute="bottom" constant="19.666666666666629" id="Bkv-S2-vBZ"/>
                             <constraint firstItem="ndv-IY-YMk" firstAttribute="trailing" secondItem="uIe-8s-tAb" secondAttribute="trailing" constant="290" id="Joz-i5-8hF"/>
                             <constraint firstItem="EoS-ds-vmj" firstAttribute="centerX" secondItem="enU-7S-r8d" secondAttribute="centerX" id="Mg0-jA-d39"/>
                             <constraint firstItem="ndv-IY-YMk" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Cv4-ap-WK9" secondAttribute="trailing" symbolic="YES" id="WfD-4M-HUB"/>
                             <constraint firstItem="enU-7S-r8d" firstAttribute="centerX" secondItem="sqf-4q-XFg" secondAttribute="centerX" id="fIZ-Mo-0aY"/>
-                            <constraint firstItem="Cv4-ap-WK9" firstAttribute="leading" secondItem="ndv-IY-YMk" secondAttribute="leading" constant="26" id="fS9-2g-UL6"/>
+                            <constraint firstItem="Cv4-ap-WK9" firstAttribute="leading" secondItem="ndv-IY-YMk" secondAttribute="leading" constant="25" id="fS9-2g-UL6"/>
                             <constraint firstItem="EoS-ds-vmj" firstAttribute="top" secondItem="ndv-IY-YMk" secondAttribute="top" constant="66" id="hWl-rf-9zk"/>
                             <constraint firstItem="enU-7S-r8d" firstAttribute="centerY" secondItem="sqf-4q-XFg" secondAttribute="centerY" constant="82" id="uLM-XC-3MJ"/>
                             <constraint firstItem="uIe-8s-tAb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ndv-IY-YMk" secondAttribute="leading" id="ueB-iI-xMp"/>
@@ -696,7 +689,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0V-c4-1za" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-715" y="-680"/>
+            <point key="canvasLocation" x="859" y="-764"/>
         </scene>
     </scenes>
     <resources>
@@ -708,6 +701,9 @@
         <image name="plus.circle" catalog="system" width="128" height="123"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
