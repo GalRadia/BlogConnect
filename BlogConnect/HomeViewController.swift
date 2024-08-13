@@ -32,28 +32,35 @@ class HomeViewController: UIViewController{
             return
         }
 
-        let ref = Database.database().reference()
-        let userReference = ref.child("users").child(currentUser.uid)
-        
+        // Validate that title and description are not empty
+        guard let title = titleTextField.text, !title.isEmpty,
+              let description = descTextField.text, !description.isEmpty else {
+            self.showAlertWithOk(title: "Validation Error", message: "Title and Description cannot be empty.", okAction: nil)
+            return
+        }
+
         // Create the post object
         guard let selectedCategoryTitle = categoriesTags.titleForSegment(at: categoriesTags.selectedSegmentIndex),
               let category = Category(rawValue: selectedCategoryTitle) else {
             print("Invalid category selected")
             return
         }
-        
-        let post = Post(title: titleTextField.text ?? "",
-                        description: descTextField.text ?? "",
+
+        let post = Post(title: title,
+                        description: description,
                         category: category,
                         userName: currentUser.displayName ?? "Anonymous")
+
         // Save post ID to the user's reference
+        let ref = Database.database().reference()
+        let userReference = ref.child("users").child(currentUser.uid)
         userReference.child("postID").childByAutoId().setValue(post.id.uuidString) { error, _ in
             if let error = error {
                 print("Failed to save post ID to user reference: \(error.localizedDescription)")
                 self.showAlertWithOk(title: "Error", message: "Failed to save post ID. Please try again.", okAction: nil)
                 return
             }
-            
+
             // Save post details to the posts node
             let postDict = post.toDictionary()
             ref.child("posts").child(post.id.uuidString).setValue(postDict) { error, _ in
@@ -62,11 +69,12 @@ class HomeViewController: UIViewController{
                     self.showAlertWithOk(title: "Error", message: "Failed to save post. Please try again.", okAction: nil)
                     return
                 }
-                
+
                 // Success handling
                 print("Post saved successfully")
                 self.showAlertWithOk(title: "Success", message: "Your post has been saved.", okAction: { _ in
                     // Clear the text fields and navigate back if needed
+                    self.titleTextField.text = ""
                     self.descTextField.text = ""
                     self.categoriesTags.selectedSegmentIndex = 0
                     self.navigationController?.popViewController(animated: true)
@@ -74,5 +82,4 @@ class HomeViewController: UIViewController{
             }
         }
     }
-
 }

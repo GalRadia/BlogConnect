@@ -452,7 +452,7 @@
                                     <constraint firstAttribute="height" constant="500" id="2S6-D1-3wi"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="250" id="Ycl-ea-Mjt" customClass="PostsTableViewCell" customModule="BlogConnect" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCellIdentifier" rowHeight="250" id="Ycl-ea-Mjt" customClass="PostsTableViewCell" customModule="BlogConnect" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="341" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ycl-ea-Mjt" id="qAB-Io-lbi">
@@ -587,7 +587,7 @@
                                     <constraint firstAttribute="height" constant="500" id="1XF-CV-EII"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="250" id="qeP-8T-TTO" customClass="PostsTableViewCell" customModule="BlogConnect" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCellIdentifier" rowHeight="250" id="qeP-8T-TTO" customClass="PostsTableViewCell" customModule="BlogConnect" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="341" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qeP-8T-TTO" id="0ZG-6K-CTj">

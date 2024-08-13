@@ -10,13 +10,13 @@ class MyProfileViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var logoutButton: UIButton!
     var posts: [Post] = []
 
+    
     override func viewDidLoad() {
           super.viewDidLoad()
           
           tableView.delegate = self
           tableView.dataSource = self
-          
-          tableView.register(UINib(nibName: "PostsTableViewCell", bundle: nil), forCellReuseIdentifier: "PostsTableViewCell")
+       
           
           fetchUserPosts()
       }
@@ -26,7 +26,7 @@ class MyProfileViewController: UIViewController, UITableViewDelegate, UITableVie
       }
 
       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-          let cell = tableView.dequeueReusableCell(withIdentifier: "PostsTableViewCell", for: indexPath) as! PostsTableViewCell
+          let cell = tableView.dequeueReusableCell(withIdentifier: "PostCellIdentifier", for: indexPath) as! PostsTableViewCell
           let post = posts[indexPath.row]
           cell.configure(with: post)
           return cell
