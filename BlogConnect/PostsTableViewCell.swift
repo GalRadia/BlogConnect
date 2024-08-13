@@ -11,6 +11,9 @@ class PostsTableViewCell: UITableViewCell {
     @IBOutlet weak var descrLBL: UILabel!
     
     
+    @IBOutlet weak var dateLBL: UILabel!
+    
+    
     
        // Called when the cell is loaded from the Storyboard
        override func awakeFromNib() {
@@ -20,6 +23,7 @@ class PostsTableViewCell: UITableViewCell {
            descrLBL.numberOfLines = 0
            self.contentView.layer.cornerRadius = 10
            self.contentView.layer.masksToBounds = true
+           
        }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,11 +36,16 @@ class PostsTableViewCell: UITableViewCell {
     }
 
 
-       // Method to configure the cell with a Post object
-       func configure(with post: Post) {
-           titleLBL.text = post.title
-           userNameLBL.text = post.userName
-           tagsLBL.text = post.category.rawValue // Display the category in place of tags
-           descrLBL.text = post.description
-       }
+    func configure(with post: Post) {
+        titleLBL.text = post.title
+        userNameLBL.text = post.userName
+        tagsLBL.text = post.category.rawValue
+        descrLBL.text = post.description
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        dateLBL.text = dateFormatter.string(from: post.timestamp) // Displaying the formatted timestamp
+    }
+
    }

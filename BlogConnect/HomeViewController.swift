@@ -13,6 +13,7 @@ class HomeViewController: UIViewController{
     @IBOutlet weak var descTextField: UITextView!
     @IBOutlet weak var categoriesTags: UISegmentedControl!
     @IBOutlet weak var titleTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         descTextField.layer.borderWidth = 1
@@ -29,6 +30,8 @@ class HomeViewController: UIViewController{
                 descTextField.text = ""
                 categoriesTags.selectedSegmentIndex = 0
     }
+    
+    
     func savePost() {
         guard let currentUser = Auth.auth().currentUser else {
             print("No current user is authenticated")
@@ -42,17 +45,19 @@ class HomeViewController: UIViewController{
             return
         }
 
-        // Create the post object
+        // Retrieve the selected category from the segmented control
         guard let selectedCategoryTitle = categoriesTags.titleForSegment(at: categoriesTags.selectedSegmentIndex),
               let category = Category(rawValue: selectedCategoryTitle) else {
             print("Invalid category selected")
             return
         }
 
+        // Create the post object with the current timestamp
         let post = Post(title: title,
                         description: description,
                         category: category,
-                        userName: currentUser.displayName ?? "Anonymous")
+                        userName: currentUser.displayName ?? "Anonymous",
+                        timestamp: Date())
 
         // Save post ID to the user's reference
         let ref = Database.database().reference()
