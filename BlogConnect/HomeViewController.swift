@@ -10,11 +10,14 @@ import FirebaseDatabase
 import FirebaseFirestore
 
 class HomeViewController: UIViewController{
-    @IBOutlet weak var descTextField: UITextField!
+    @IBOutlet weak var descTextField: UITextView!
     @IBOutlet weak var categoriesTags: UISegmentedControl!
     @IBOutlet weak var titleTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        descTextField.layer.borderWidth = 1
+        descTextField.layer.borderColor = UIColor.systemGray5.cgColor
+        descTextField.layer.cornerRadius = 6
     }
 
     @IBAction func submitClicked(_ sender: Any) {

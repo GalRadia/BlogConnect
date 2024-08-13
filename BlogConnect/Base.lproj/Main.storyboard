@@ -287,8 +287,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufU-Ni-H6a">
-                                <rect key="frame" x="102" y="159" width="263" height="41"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ufU-Ni-H6a">
+                                <rect key="frame" x="93" y="159" width="272" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -298,16 +298,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="top" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Write here" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" sizingRule="oversize" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="PaN-sn-EFw">
-                                <rect key="frame" x="102" y="283" width="263" height="160"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="BEW-Sh-j8Q" userLabel="height = 160"/>
-                                </constraints>
-                                <attributedString key="attributedText"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNE-tT-4dE">
-                                <rect key="frame" x="33" y="169" width="42" height="21"/>
+                                <rect key="frame" x="33" y="169" width="33" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -349,35 +341,42 @@
                                     <segment title="Adventure"/>
                                 </segments>
                             </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" adjustsFontForContentSizeCategory="YES" layoutManager="textKit1" translatesAutoresizingMaskIntoConstraints="NO" id="XXC-kd-SRo">
+                                <rect key="frame" x="93" y="287" width="267" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3ea-B0-WJZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="kNE-tT-4dE" firstAttribute="top" secondItem="3ea-B0-WJZ" secondAttribute="top" constant="110" id="0Ht-Iw-C8i"/>
+                            <constraint firstItem="XXC-kd-SRo" firstAttribute="leading" secondItem="ufU-Ni-H6a" secondAttribute="leading" id="3iX-ns-o7T"/>
                             <constraint firstItem="SlN-S4-TbC" firstAttribute="leading" secondItem="3ea-B0-WJZ" secondAttribute="leading" constant="73" id="9mt-cg-ZdC"/>
-                            <constraint firstItem="ufU-Ni-H6a" firstAttribute="leading" secondItem="PaN-sn-EFw" secondAttribute="leading" id="A38-ux-dut"/>
                             <constraint firstItem="3ea-B0-WJZ" firstAttribute="trailing" secondItem="ufU-Ni-H6a" secondAttribute="trailing" constant="28" id="Alf-6U-SVi"/>
                             <constraint firstItem="72V-Gn-ah7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3ea-B0-WJZ" secondAttribute="leading" id="Fb4-Ru-hlc"/>
-                            <constraint firstItem="3ea-B0-WJZ" firstAttribute="trailing" secondItem="PaN-sn-EFw" secondAttribute="trailing" constant="28" id="Ixg-IX-to7"/>
                             <constraint firstItem="kNE-tT-4dE" firstAttribute="centerY" secondItem="ufU-Ni-H6a" secondAttribute="centerY" id="NDM-NN-KVM"/>
                             <constraint firstItem="72V-Gn-ah7" firstAttribute="top" secondItem="3ea-B0-WJZ" secondAttribute="top" constant="26" id="P9l-S0-O5i"/>
+                            <constraint firstItem="z0f-LC-ypc" firstAttribute="top" secondItem="XXC-kd-SRo" secondAttribute="bottom" constant="56" id="Q1I-80-WF3"/>
                             <constraint firstItem="kNE-tT-4dE" firstAttribute="leading" secondItem="ASn-Q5-A6n" secondAttribute="leading" id="QnC-qh-3oU"/>
                             <constraint firstItem="kNE-tT-4dE" firstAttribute="leading" secondItem="3ea-B0-WJZ" secondAttribute="leading" constant="33" id="Rn0-8X-TDB"/>
+                            <constraint firstItem="XXC-kd-SRo" firstAttribute="top" secondItem="ASn-Q5-A6n" secondAttribute="bottom" constant="21" id="S5N-rE-Oqn"/>
                             <constraint firstItem="ZQO-M9-ShC" firstAttribute="top" secondItem="z0f-LC-ypc" secondAttribute="bottom" constant="31" id="U0H-Ns-AK7"/>
+                            <constraint firstAttribute="bottom" secondItem="ZQO-M9-ShC" secondAttribute="bottom" constant="215" id="Uhy-Mm-J6A"/>
                             <constraint firstItem="3ea-B0-WJZ" firstAttribute="trailing" secondItem="72V-Gn-ah7" secondAttribute="trailing" constant="112" id="aav-JB-Ekb"/>
                             <constraint firstItem="OQz-5k-oG5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SlN-S4-TbC" secondAttribute="trailing" constant="8" symbolic="YES" id="dMk-jh-egM"/>
                             <constraint firstItem="3ea-B0-WJZ" firstAttribute="trailing" secondItem="ASn-Q5-A6n" secondAttribute="trailing" constant="249" id="dd1-fD-VtX"/>
-                            <constraint firstItem="PaN-sn-EFw" firstAttribute="leading" secondItem="3ea-B0-WJZ" secondAttribute="leading" constant="102" id="ed8-S2-vkB"/>
                             <constraint firstItem="3ea-B0-WJZ" firstAttribute="trailing" secondItem="z0f-LC-ypc" secondAttribute="trailing" constant="277" id="fUv-lf-Aqh"/>
                             <constraint firstItem="ufU-Ni-H6a" firstAttribute="leading" secondItem="kNE-tT-4dE" secondAttribute="trailing" constant="27" id="gcu-zq-u0j"/>
                             <constraint firstItem="3ea-B0-WJZ" firstAttribute="trailing" secondItem="OQz-5k-oG5" secondAttribute="trailing" constant="57" id="iGc-ZL-8Mv"/>
                             <constraint firstItem="SlN-S4-TbC" firstAttribute="baseline" secondItem="OQz-5k-oG5" secondAttribute="baseline" id="jV0-JV-7FS"/>
                             <constraint firstItem="ufU-Ni-H6a" firstAttribute="top" secondItem="72V-Gn-ah7" secondAttribute="bottom" constant="38" id="kmw-Z6-jSG"/>
+                            <constraint firstItem="ZQO-M9-ShC" firstAttribute="trailing" secondItem="XXC-kd-SRo" secondAttribute="trailing" id="mm5-UP-4BJ"/>
                             <constraint firstItem="z0f-LC-ypc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZQO-M9-ShC" secondAttribute="leading" id="rGi-Vn-QII"/>
                             <constraint firstItem="3ea-B0-WJZ" firstAttribute="bottom" secondItem="SlN-S4-TbC" secondAttribute="bottom" constant="52" id="sNe-Rn-xiI"/>
-                            <constraint firstItem="PaN-sn-EFw" firstAttribute="top" secondItem="ASn-Q5-A6n" secondAttribute="bottom" constant="17" id="w48-al-6wV"/>
                             <constraint firstItem="z0f-LC-ypc" firstAttribute="leading" secondItem="3ea-B0-WJZ" secondAttribute="leading" constant="33" id="wPY-zy-mX1"/>
-                            <constraint firstItem="z0f-LC-ypc" firstAttribute="top" secondItem="PaN-sn-EFw" secondAttribute="bottom" constant="28" id="wrd-wC-CYL"/>
                             <constraint firstItem="ASn-Q5-A6n" firstAttribute="top" secondItem="ufU-Ni-H6a" secondAttribute="bottom" constant="45" id="yir-zv-KgX"/>
                             <constraint firstItem="ZQO-M9-ShC" firstAttribute="centerX" secondItem="26F-MS-eiX" secondAttribute="centerX" id="zW3-ih-TUG"/>
                         </constraints>
@@ -386,13 +385,13 @@
                     <navigationItem key="navigationItem" id="yp9-uT-C4K"/>
                     <connections>
                         <outlet property="categoriesTags" destination="ZQO-M9-ShC" id="kfe-wi-2vx"/>
-                        <outlet property="descTextField" destination="PaN-sn-EFw" id="Ffo-78-r1t"/>
+                        <outlet property="descTextField" destination="XXC-kd-SRo" id="e0K-iC-Hll"/>
                         <outlet property="titleTextField" destination="ufU-Ni-H6a" id="rgy-uu-Ac6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ah7-XP-Ye3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-680"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-680.28169014084506"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ilU-kB-MVe">
@@ -440,6 +439,7 @@
                                     <segment title="News"/>
                                     <segment title="Leisure"/>
                                     <segment title="Adventure"/>
+                                    <segment title="All"/>
                                 </segments>
                                 <connections>
                                     <action selector="categoryChanged:" destination="Rll-vV-Xhb" eventType="valueChanged" id="y0B-yi-LvN"/>
