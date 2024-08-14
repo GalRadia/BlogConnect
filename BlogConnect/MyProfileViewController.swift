@@ -17,8 +17,11 @@ class MyProfileViewController: UIViewController, UITableViewDelegate, UITableVie
             tableView.dataSource = self
             tableView.rowHeight = UITableView.automaticDimension
             tableView.estimatedRowHeight = 100 // Set an estimated row height
-            fetchUserPosts()
         }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchUserPosts()
+    }
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return posts.count

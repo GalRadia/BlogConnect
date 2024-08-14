@@ -327,13 +327,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0f-LC-ypc">
-                                <rect key="frame" x="33" y="471" width="83" height="21"/>
+                                <rect key="frame" x="33" y="437" width="83" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" tag="4" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZQO-M9-ShC">
-                                <rect key="frame" x="33" y="523" width="327" height="32"/>
+                                <rect key="frame" x="33" y="489" width="327" height="32"/>
                                 <segments>
                                     <segment title="News"/>
                                     <segment title="Leisure"/>
@@ -348,6 +348,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="17C-ms-ltv">
+                                <rect key="frame" x="165" y="550" width="195" height="89"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEF-Hn-0fM">
+                                <rect key="frame" x="33" y="584" width="73" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3ea-B0-WJZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -359,12 +370,12 @@
                             <constraint firstItem="72V-Gn-ah7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3ea-B0-WJZ" secondAttribute="leading" id="Fb4-Ru-hlc"/>
                             <constraint firstItem="kNE-tT-4dE" firstAttribute="centerY" secondItem="ufU-Ni-H6a" secondAttribute="centerY" id="NDM-NN-KVM"/>
                             <constraint firstItem="72V-Gn-ah7" firstAttribute="top" secondItem="3ea-B0-WJZ" secondAttribute="top" constant="26" id="P9l-S0-O5i"/>
-                            <constraint firstItem="z0f-LC-ypc" firstAttribute="top" secondItem="XXC-kd-SRo" secondAttribute="bottom" constant="56" id="Q1I-80-WF3"/>
+                            <constraint firstItem="z0f-LC-ypc" firstAttribute="top" secondItem="XXC-kd-SRo" secondAttribute="bottom" constant="22" id="Q1I-80-WF3"/>
                             <constraint firstItem="kNE-tT-4dE" firstAttribute="leading" secondItem="ASn-Q5-A6n" secondAttribute="leading" id="QnC-qh-3oU"/>
                             <constraint firstItem="kNE-tT-4dE" firstAttribute="leading" secondItem="3ea-B0-WJZ" secondAttribute="leading" constant="33" id="Rn0-8X-TDB"/>
                             <constraint firstItem="XXC-kd-SRo" firstAttribute="top" secondItem="ASn-Q5-A6n" secondAttribute="bottom" constant="21" id="S5N-rE-Oqn"/>
                             <constraint firstItem="ZQO-M9-ShC" firstAttribute="top" secondItem="z0f-LC-ypc" secondAttribute="bottom" constant="31" id="U0H-Ns-AK7"/>
-                            <constraint firstAttribute="bottom" secondItem="ZQO-M9-ShC" secondAttribute="bottom" constant="215" id="Uhy-Mm-J6A"/>
+                            <constraint firstAttribute="bottom" secondItem="ZQO-M9-ShC" secondAttribute="bottom" constant="249" id="Uhy-Mm-J6A"/>
                             <constraint firstItem="3ea-B0-WJZ" firstAttribute="trailing" secondItem="72V-Gn-ah7" secondAttribute="trailing" constant="112" id="aav-JB-Ekb"/>
                             <constraint firstItem="OQz-5k-oG5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SlN-S4-TbC" secondAttribute="trailing" constant="8" symbolic="YES" id="dMk-jh-egM"/>
                             <constraint firstItem="3ea-B0-WJZ" firstAttribute="trailing" secondItem="ASn-Q5-A6n" secondAttribute="trailing" constant="249" id="dd1-fD-VtX"/>
@@ -385,13 +396,14 @@
                     <navigationItem key="navigationItem" id="yp9-uT-C4K"/>
                     <connections>
                         <outlet property="categoriesTags" destination="ZQO-M9-ShC" id="kfe-wi-2vx"/>
+                        <outlet property="datePicker" destination="17C-ms-ltv" id="LHj-3n-BUg"/>
                         <outlet property="descTextField" destination="XXC-kd-SRo" id="e0K-iC-Hll"/>
                         <outlet property="titleTextField" destination="ufU-Ni-H6a" id="rgy-uu-Ac6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ah7-XP-Ye3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-384" y="-764"/>
+            <point key="canvasLocation" x="-385.49618320610688" y="-764.08450704225356"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ilU-kB-MVe">
