@@ -48,6 +48,13 @@ class HomeViewController: UIViewController{
             return
         }
 
+        // Safely unwrap the current user
+        guard let currentUser = Auth.auth().currentUser else {
+            print("No current user is authenticated")
+            self.showAlertWithOk(title: "Error", message: "No user is logged in.", okAction: nil)
+            return
+        }
+
         // Show confirmation alert to the user
         let confirmationAlert = UIAlertController(title: "Confirm Submission",
                                                    message: "Are you sure you want to submit this post?",
@@ -58,12 +65,12 @@ class HomeViewController: UIViewController{
             let post = Post(title: title,
                             description: description,
                             category: category,
-                            userName: Auth.auth().currentUser?.displayName ?? "Anonymous",
+                            userName: currentUser.displayName ?? "Anonymous", // Use currentUser safely
                             timestamp: self.datePicker.date)
 
             // Save post ID to the user's reference
             let ref = Database.database().reference()
-            let userReference = ref.child("users").child(Auth.auth().currentUser!.uid)
+            let userReference = ref.child("users").child(currentUser.uid)
             userReference.child("postID").childByAutoId().setValue(post.id.uuidString) { error, _ in
                 if let error = error {
                     print("Failed to save post ID to user reference: \(error.localizedDescription)")

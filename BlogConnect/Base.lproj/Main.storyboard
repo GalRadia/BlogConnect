@@ -490,7 +490,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JC7-n2-0hm">
-                                                    <rect key="frame" x="20" y="118" width="321" height="182"/>
+                                                    <rect key="frame" x="20" y="146" width="292" height="154"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -523,9 +523,9 @@
                                                 <constraint firstItem="LlX-bn-fIQ" firstAttribute="trailing" secondItem="qAB-Io-lbi" secondAttribute="trailingMargin" id="Fl2-b6-9Qe"/>
                                                 <constraint firstItem="LlX-bn-fIQ" firstAttribute="leading" secondItem="ZsX-0D-RLK" secondAttribute="leading" id="JZG-SE-Mig"/>
                                                 <constraint firstItem="ZsX-0D-RLK" firstAttribute="leading" secondItem="ndW-4y-vTX" secondAttribute="leading" id="K0f-VA-M9P"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="JC7-n2-0hm" secondAttribute="trailing" constant="-20" id="NYv-wW-cyl"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="JC7-n2-0hm" secondAttribute="trailing" constant="9" id="NYv-wW-cyl"/>
                                                 <constraint firstItem="ndW-4y-vTX" firstAttribute="top" secondItem="ZsX-0D-RLK" secondAttribute="bottom" constant="36" id="OnA-4S-8gv"/>
-                                                <constraint firstItem="JC7-n2-0hm" firstAttribute="top" secondItem="ndW-4y-vTX" secondAttribute="bottom" constant="-20" id="aX2-19-dgQ"/>
+                                                <constraint firstItem="JC7-n2-0hm" firstAttribute="top" secondItem="ndW-4y-vTX" secondAttribute="bottom" constant="8" id="aX2-19-dgQ"/>
                                                 <constraint firstItem="ndW-4y-vTX" firstAttribute="leading" secondItem="JC7-n2-0hm" secondAttribute="leading" id="cPy-uk-Pj1"/>
                                                 <constraint firstItem="ZsX-0D-RLK" firstAttribute="top" secondItem="LlX-bn-fIQ" secondAttribute="bottom" constant="8" id="fxh-JC-2Mq"/>
                                                 <constraint firstItem="LlX-bn-fIQ" firstAttribute="leading" secondItem="qAB-Io-lbi" secondAttribute="leadingMargin" id="jve-xk-Nl9"/>
@@ -598,6 +598,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="500" id="1XF-CV-EII"/>
                                 </constraints>
+                                <inset key="scrollIndicatorInsets" minX="2" minY="2" maxX="2" maxY="2"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCellIdentifier" rowHeight="300" id="qeP-8T-TTO" customClass="PostsTableViewCell" customModule="BlogConnect" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="341" height="300"/>
@@ -634,7 +635,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3H-Xo-KSi">
-                                                    <rect key="frame" x="20" y="118" width="321" height="182"/>
+                                                    <rect key="frame" x="20" y="146" width="301" height="154"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -658,7 +659,7 @@
                                                 <constraint firstItem="q9M-uC-1zN" firstAttribute="top" secondItem="0ZG-6K-CTj" secondAttribute="topMargin" id="IWt-e0-Sbh"/>
                                                 <constraint firstItem="JfQ-Mf-Nfv" firstAttribute="leading" secondItem="QZb-RH-03f" secondAttribute="leading" id="Pcw-de-KB5"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6as-rR-PjG" secondAttribute="trailing" constant="20" symbolic="YES" id="ULO-fx-sDH"/>
-                                                <constraint firstItem="Z3H-Xo-KSi" firstAttribute="top" secondItem="QZb-RH-03f" secondAttribute="bottom" constant="-20" id="Vbb-X9-eKE"/>
+                                                <constraint firstItem="Z3H-Xo-KSi" firstAttribute="top" secondItem="QZb-RH-03f" secondAttribute="bottom" constant="8" id="Vbb-X9-eKE"/>
                                                 <constraint firstItem="QZb-RH-03f" firstAttribute="leading" secondItem="Z3H-Xo-KSi" secondAttribute="leading" id="Y1E-eE-Ljh"/>
                                                 <constraint firstItem="JfQ-Mf-Nfv" firstAttribute="trailing" secondItem="QZb-RH-03f" secondAttribute="trailing" id="bSS-yh-cjh"/>
                                                 <constraint firstItem="JfQ-Mf-Nfv" firstAttribute="top" secondItem="q9M-uC-1zN" secondAttribute="bottom" constant="8" id="cvB-nj-hgt"/>
@@ -666,7 +667,7 @@
                                                 <constraint firstItem="QZb-RH-03f" firstAttribute="top" secondItem="6as-rR-PjG" secondAttribute="bottom" constant="1" id="e81-7L-QU6"/>
                                                 <constraint firstItem="q9M-uC-1zN" firstAttribute="trailing" secondItem="JfQ-Mf-Nfv" secondAttribute="trailing" id="fNd-AD-HVN"/>
                                                 <constraint firstItem="QZb-RH-03f" firstAttribute="top" secondItem="JfQ-Mf-Nfv" secondAttribute="bottom" constant="36" id="jjb-xW-WDS"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Z3H-Xo-KSi" secondAttribute="trailing" constant="-20" id="pYb-Mp-L8d"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Z3H-Xo-KSi" secondAttribute="trailing" id="pYb-Mp-L8d"/>
                                                 <constraint firstItem="6as-rR-PjG" firstAttribute="top" secondItem="JfQ-Mf-Nfv" secondAttribute="bottom" constant="8" id="vNb-K7-fKa"/>
                                             </constraints>
                                         </tableViewCellContentView>
