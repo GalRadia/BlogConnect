@@ -27,13 +27,67 @@ class MyProfileViewController: UIViewController, UITableViewDelegate, UITableVie
             return posts.count
         }
 
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PostCellIdentifier", for: indexPath) as! PostsTableViewCell
-            let post = posts[indexPath.row]
-            cell.configure(with: post)
-            return cell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+           let cell = tableView.dequeueReusableCell(withIdentifier: "PostCellIdentifier", for: indexPath) as! PostsTableViewCell
+           let post = posts[indexPath.row]
+           
+           // Show delete button in Profile Page
+           cell.configure(with: post, showDeleteButton: true)
+           
+           cell.onDeleteButtonTapped = { [weak self] in
+               self?.confirmDeletePost(at: indexPath)
+           }
+           
+           return cell
+       }
+       
+       // Function to confirm deletion of a post
+       func confirmDeletePost(at indexPath: IndexPath) {
+           let alert = UIAlertController(title: "Delete Post", message: "Are you sure you want to delete this post?", preferredStyle: .alert)
+           
+           let confirmAction = UIAlertAction(title: "Yes", style: .destructive) { _ in
+               self.deletePost(at: indexPath)
+           }
+           
+           let cancelAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
+           
+           alert.addAction(confirmAction)
+           alert.addAction(cancelAction)
+           
+           self.present(alert, animated: true, completion: nil)
+       }
+    
+    
+    func deletePost(at indexPath: IndexPath) {
+        guard indexPath.row < posts.count else {
+            print("Index out of range - no post found at this index.")
+            return
         }
         
+        let post = posts[indexPath.row]
+        let ref = Database.database().reference().child("posts").child(post.id.uuidString)
+        
+        ref.removeValue { error, _ in
+            if let error = error {
+                print("Failed to delete post: \(error.localizedDescription)")
+            } else {
+                print("Post deleted successfully")
+                
+                // Remove the post from the data source
+                self.posts.remove(at: indexPath.row)
+                
+                // Reload the entire table view
+                self.tableView.reloadData()
+                
+                // Optionally refresh posts from Firebase
+                self.fetchUserPosts()
+            }
+        }
+    }
+
+
+
+
         // Method to fetch posts of the current user from Firebase
         func fetchUserPosts() {
             guard let currentUser = Auth.auth().currentUser else {

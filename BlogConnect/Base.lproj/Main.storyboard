@@ -464,11 +464,11 @@
                                     <constraint firstAttribute="height" constant="500" id="2S6-D1-3wi"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCellIdentifier" rowHeight="300" id="Ycl-ea-Mjt" customClass="PostsTableViewCell" customModule="BlogConnect" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="341" height="300"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCellIdentifier" rowHeight="350" id="Ycl-ea-Mjt" customClass="PostsTableViewCell" customModule="BlogConnect" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="341" height="350"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ycl-ea-Mjt" id="qAB-Io-lbi">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="300"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="350"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LlX-bn-fIQ">
@@ -490,7 +490,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JC7-n2-0hm">
-                                                    <rect key="frame" x="20" y="146" width="292" height="154"/>
+                                                    <rect key="frame" x="20" y="146" width="301" height="148"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -513,17 +513,28 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsy-hl-Lwr">
+                                                    <rect key="frame" x="223.00000000000003" y="302" width="97.333333333333343" height="34.333333333333314"/>
+                                                    <color key="tintColor" systemColor="systemRedColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" image="trash" catalog="system" title="Delete"/>
+                                                    <connections>
+                                                        <action selector="deleteButtonTapped:" destination="Ycl-ea-Mjt" eventType="touchUpInside" id="gSe-BK-6JS"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="separatorColor"/>
                                             <constraints>
                                                 <constraint firstItem="LlX-bn-fIQ" firstAttribute="trailing" secondItem="ZsX-0D-RLK" secondAttribute="trailing" id="0gy-aH-2gc"/>
                                                 <constraint firstItem="ndW-4y-vTX" firstAttribute="top" secondItem="V0V-WV-wVG" secondAttribute="bottom" constant="1" id="5uO-BM-5U0"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="nsy-hl-Lwr" secondAttribute="trailing" id="81w-Zp-18v"/>
                                                 <constraint firstItem="LlX-bn-fIQ" firstAttribute="top" secondItem="qAB-Io-lbi" secondAttribute="topMargin" id="8F3-dy-TyW"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="JC7-n2-0hm" secondAttribute="bottom" constant="-11" id="8Go-fr-0EV"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="JC7-n2-0hm" secondAttribute="bottom" constant="45" id="8Go-fr-0EV"/>
                                                 <constraint firstItem="LlX-bn-fIQ" firstAttribute="trailing" secondItem="qAB-Io-lbi" secondAttribute="trailingMargin" id="Fl2-b6-9Qe"/>
+                                                <constraint firstItem="nsy-hl-Lwr" firstAttribute="top" secondItem="JC7-n2-0hm" secondAttribute="bottom" constant="8" symbolic="YES" id="HyW-df-xAi"/>
                                                 <constraint firstItem="LlX-bn-fIQ" firstAttribute="leading" secondItem="ZsX-0D-RLK" secondAttribute="leading" id="JZG-SE-Mig"/>
                                                 <constraint firstItem="ZsX-0D-RLK" firstAttribute="leading" secondItem="ndW-4y-vTX" secondAttribute="leading" id="K0f-VA-M9P"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="JC7-n2-0hm" secondAttribute="trailing" constant="9" id="NYv-wW-cyl"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="JC7-n2-0hm" secondAttribute="trailing" id="NYv-wW-cyl"/>
                                                 <constraint firstItem="ndW-4y-vTX" firstAttribute="top" secondItem="ZsX-0D-RLK" secondAttribute="bottom" constant="36" id="OnA-4S-8gv"/>
                                                 <constraint firstItem="JC7-n2-0hm" firstAttribute="top" secondItem="ndW-4y-vTX" secondAttribute="bottom" constant="8" id="aX2-19-dgQ"/>
                                                 <constraint firstItem="ndW-4y-vTX" firstAttribute="leading" secondItem="JC7-n2-0hm" secondAttribute="leading" id="cPy-uk-Pj1"/>
@@ -531,6 +542,7 @@
                                                 <constraint firstItem="LlX-bn-fIQ" firstAttribute="leading" secondItem="qAB-Io-lbi" secondAttribute="leadingMargin" id="jve-xk-Nl9"/>
                                                 <constraint firstItem="V0V-WV-wVG" firstAttribute="top" secondItem="ZsX-0D-RLK" secondAttribute="bottom" constant="8" id="l1m-vo-9E9"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="V0V-WV-wVG" secondAttribute="trailing" constant="20" symbolic="YES" id="lFI-z9-nnm"/>
+                                                <constraint firstItem="nsy-hl-Lwr" firstAttribute="leading" secondItem="qAB-Io-lbi" secondAttribute="leading" constant="223" id="sfS-t4-yI5"/>
                                                 <constraint firstItem="ZsX-0D-RLK" firstAttribute="trailing" secondItem="ndW-4y-vTX" secondAttribute="trailing" id="vT2-Qt-1d2"/>
                                                 <constraint firstItem="V0V-WV-wVG" firstAttribute="leading" secondItem="ndW-4y-vTX" secondAttribute="leading" id="w6Y-ur-AlA"/>
                                             </constraints>
@@ -543,6 +555,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="dateLBL" destination="V0V-WV-wVG" id="qhk-S8-qqR"/>
+                                            <outlet property="deleteButton" destination="nsy-hl-Lwr" id="C2n-wS-gBG"/>
                                             <outlet property="descrLBL" destination="JC7-n2-0hm" id="Ug4-xZ-RkS"/>
                                             <outlet property="tagsLBL" destination="ndW-4y-vTX" id="ZOD-YB-5YF"/>
                                             <outlet property="titleLBL" destination="LlX-bn-fIQ" id="VzL-pI-kkK"/>
@@ -600,11 +613,11 @@
                                 </constraints>
                                 <inset key="scrollIndicatorInsets" minX="2" minY="2" maxX="2" maxY="2"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCellIdentifier" rowHeight="300" id="qeP-8T-TTO" customClass="PostsTableViewCell" customModule="BlogConnect" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="341" height="300"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCellIdentifier" rowHeight="350" id="qeP-8T-TTO" customClass="PostsTableViewCell" customModule="BlogConnect" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="341" height="350"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qeP-8T-TTO" id="0ZG-6K-CTj">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="300"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="350"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9M-uC-1zN">
@@ -635,7 +648,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3H-Xo-KSi">
-                                                    <rect key="frame" x="20" y="146" width="301" height="154"/>
+                                                    <rect key="frame" x="20" y="146" width="301" height="141"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -649,24 +662,38 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drR-mN-RV8">
+                                                    <rect key="frame" x="262" y="295" width="69" height="44"/>
+                                                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Delete" image="trash" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="deleteButtonTapped:" destination="qeP-8T-TTO" eventType="touchUpInside" id="Q7D-Ys-Z7O"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="separatorColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Z3H-Xo-KSi" secondAttribute="bottom" constant="-11" id="0sY-lg-EpP"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Z3H-Xo-KSi" secondAttribute="bottom" constant="52" id="0sY-lg-EpP"/>
                                                 <constraint firstItem="q9M-uC-1zN" firstAttribute="trailing" secondItem="0ZG-6K-CTj" secondAttribute="trailingMargin" id="89I-Gt-Anb"/>
                                                 <constraint firstItem="q9M-uC-1zN" firstAttribute="leading" secondItem="0ZG-6K-CTj" secondAttribute="leadingMargin" id="Eca-jE-LKe"/>
                                                 <constraint firstItem="6as-rR-PjG" firstAttribute="leading" secondItem="QZb-RH-03f" secondAttribute="leading" id="Hvx-I4-ff6"/>
                                                 <constraint firstItem="q9M-uC-1zN" firstAttribute="top" secondItem="0ZG-6K-CTj" secondAttribute="topMargin" id="IWt-e0-Sbh"/>
                                                 <constraint firstItem="JfQ-Mf-Nfv" firstAttribute="leading" secondItem="QZb-RH-03f" secondAttribute="leading" id="Pcw-de-KB5"/>
+                                                <constraint firstItem="drR-mN-RV8" firstAttribute="top" secondItem="Z3H-Xo-KSi" secondAttribute="bottom" constant="8" symbolic="YES" id="Qy7-mr-2Ab"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6as-rR-PjG" secondAttribute="trailing" constant="20" symbolic="YES" id="ULO-fx-sDH"/>
                                                 <constraint firstItem="Z3H-Xo-KSi" firstAttribute="top" secondItem="QZb-RH-03f" secondAttribute="bottom" constant="8" id="Vbb-X9-eKE"/>
                                                 <constraint firstItem="QZb-RH-03f" firstAttribute="leading" secondItem="Z3H-Xo-KSi" secondAttribute="leading" id="Y1E-eE-Ljh"/>
+                                                <constraint firstItem="drR-mN-RV8" firstAttribute="bottom" secondItem="0ZG-6K-CTj" secondAttribute="bottomMargin" id="b6u-SV-rZO"/>
                                                 <constraint firstItem="JfQ-Mf-Nfv" firstAttribute="trailing" secondItem="QZb-RH-03f" secondAttribute="trailing" id="bSS-yh-cjh"/>
+                                                <constraint firstItem="drR-mN-RV8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0ZG-6K-CTj" secondAttribute="leading" constant="20" symbolic="YES" id="c2y-6s-LZv"/>
                                                 <constraint firstItem="JfQ-Mf-Nfv" firstAttribute="top" secondItem="q9M-uC-1zN" secondAttribute="bottom" constant="8" id="cvB-nj-hgt"/>
                                                 <constraint firstItem="q9M-uC-1zN" firstAttribute="leading" secondItem="JfQ-Mf-Nfv" secondAttribute="leading" id="dYk-Ip-aXo"/>
                                                 <constraint firstItem="QZb-RH-03f" firstAttribute="top" secondItem="6as-rR-PjG" secondAttribute="bottom" constant="1" id="e81-7L-QU6"/>
                                                 <constraint firstItem="q9M-uC-1zN" firstAttribute="trailing" secondItem="JfQ-Mf-Nfv" secondAttribute="trailing" id="fNd-AD-HVN"/>
                                                 <constraint firstItem="QZb-RH-03f" firstAttribute="top" secondItem="JfQ-Mf-Nfv" secondAttribute="bottom" constant="36" id="jjb-xW-WDS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="drR-mN-RV8" secondAttribute="trailing" constant="-10" id="mAT-eJ-3hE"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Z3H-Xo-KSi" secondAttribute="trailing" id="pYb-Mp-L8d"/>
                                                 <constraint firstItem="6as-rR-PjG" firstAttribute="top" secondItem="JfQ-Mf-Nfv" secondAttribute="bottom" constant="8" id="vNb-K7-fKa"/>
                                             </constraints>
@@ -679,6 +706,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="dateLBL" destination="6as-rR-PjG" id="Yjv-4U-EXP"/>
+                                            <outlet property="deleteButton" destination="drR-mN-RV8" id="hY5-AM-0ZK"/>
                                             <outlet property="descrLBL" destination="Z3H-Xo-KSi" id="Xiq-J0-EBT"/>
                                             <outlet property="tagsLBL" destination="QZb-RH-03f" id="Bbe-02-tHo"/>
                                             <outlet property="titleLBL" destination="q9M-uC-1zN" id="U9v-4Q-a15"/>
@@ -740,6 +768,7 @@
         <image name="phone" catalog="system" width="128" height="115"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="plus.circle" catalog="system" width="128" height="123"/>
+        <image name="trash" catalog="system" width="117" height="128"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -754,6 +783,9 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

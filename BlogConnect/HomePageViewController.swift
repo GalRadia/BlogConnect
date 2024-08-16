@@ -27,14 +27,17 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
          return filteredPosts.count
      }
-     
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCellIdentifier", for: indexPath) as! PostsTableViewCell
-         let post = filteredPosts[indexPath.row]
-         cell.configure(with: post)
-         return cell
-     }
-     
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PostCellIdentifier", for: indexPath) as! PostsTableViewCell
+        let post = filteredPosts[indexPath.row]
+        
+        // Hide delete button in HomePage
+        cell.configure(with: post, showDeleteButton: false)
+        
+        return cell
+    }
+
     func fetchPosts() {
         guard let currentUser = Auth.auth().currentUser else {
             print("No current user is authenticated")
