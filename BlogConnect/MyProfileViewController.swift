@@ -65,25 +65,51 @@ class MyProfileViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         
         let post = posts[indexPath.row]
-        let ref = Database.database().reference().child("posts").child(post.id.uuidString)
+        let postRef = Database.database().reference().child("posts").child(post.id.uuidString)
         
-        ref.removeValue { error, _ in
+        guard let currentUser = Auth.auth().currentUser else {
+            print("No current user is authenticated")
+            return
+        }
+        
+        let userPostRef = Database.database().reference().child("users").child(currentUser.uid).child("postID")
+
+        // Remove the post from the 'posts' node
+        postRef.removeValue { error, _ in
             if let error = error {
                 print("Failed to delete post: \(error.localizedDescription)")
             } else {
                 print("Post deleted successfully")
                 
-                // Remove the post from the data source
-                self.posts.remove(at: indexPath.row)
-                
-                // Reload the entire table view
-                self.tableView.reloadData()
-                
-                // Optionally refresh posts from Firebase
-                self.fetchUserPosts()
+                // Now remove the post ID from the user's list of posts
+                userPostRef.queryOrderedByValue().queryEqual(toValue: post.id.uuidString).observeSingleEvent(of: .childAdded, with: { snapshot in
+                    snapshot.ref.removeValue { error, _ in
+                        if let error = error {
+                            print("Failed to remove post ID from user's post list: \(error.localizedDescription)")
+                        } else {
+                            print("Post ID removed from user's post list successfully")
+                            
+                            // Check if indexPath.row is still valid before removing the post
+                            if indexPath.row < self.posts.count {
+                                // Remove the post from the local data source
+                                self.posts.remove(at: indexPath.row)
+                                
+                                // Reload the entire table view
+                                self.tableView.reloadData()
+                                
+                                // Optionally refresh posts from Firebase
+                                self.fetchUserPosts()
+                            } else {
+                                print("Index out of range - post has already been removed.")
+                            }
+                        }
+                    }
+                })
             }
         }
     }
+
+
 
 
 

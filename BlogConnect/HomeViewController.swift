@@ -14,10 +14,8 @@ class HomeViewController: UIViewController{
     @IBOutlet weak var categoriesTags: UISegmentedControl!
     @IBOutlet weak var titleTextField: UITextField!
     
-    @IBOutlet weak var datePicker: UIDatePicker!
     override func viewDidLoad() {
         super.viewDidLoad()
-        datePicker.maximumDate = Date()
         descTextField.layer.borderWidth = 1
         descTextField.layer.borderColor = UIColor.systemGray5.cgColor
         descTextField.layer.cornerRadius = 6
@@ -65,8 +63,7 @@ class HomeViewController: UIViewController{
             let post = Post(title: title,
                             description: description,
                             category: category,
-                            userName: currentUser.displayName ?? "Anonymous", // Use currentUser safely
-                            timestamp: self.datePicker.date)
+                            userName: currentUser.displayName ?? "Anonymous")
 
             // Save post ID to the user's reference
             let ref = Database.database().reference()

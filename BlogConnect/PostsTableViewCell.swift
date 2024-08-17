@@ -51,6 +51,7 @@ class PostsTableViewCell: UITableViewCell {
         // Control the visibility of the delete button
         deleteButton.isHidden = !showDeleteButton
     }
+    
 
     // Action method for the delete button
     @IBAction func deleteButtonTapped(_ sender: UIButton) {

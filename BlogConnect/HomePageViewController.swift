@@ -20,6 +20,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
          tableView.dataSource = self
          tableView.rowHeight = UITableView.automaticDimension
          tableView.estimatedRowHeight = 100 // Set an estimated row height
+
          
          fetchPosts()
      }
