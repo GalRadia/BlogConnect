@@ -30,14 +30,14 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
      }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PostCellIdentifier", for: indexPath) as! PostsTableViewCell
-        let post = filteredPosts[indexPath.row]
-        
-        // Hide delete button in HomePage
-        cell.configure(with: post, showDeleteButton: false)
-        
-        return cell
-    }
+           let cell = tableView.dequeueReusableCell(withIdentifier: "PostCellHomePage", for: indexPath) as! PostsCellWithoutDelete
+           let post = filteredPosts[indexPath.row]
+           
+           // Configure the cell without delete button
+           cell.configure(with: post)
+           
+           return cell
+       }
 
     func fetchPosts() {
         guard let currentUser = Auth.auth().currentUser else {

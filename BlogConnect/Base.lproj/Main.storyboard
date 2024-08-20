@@ -473,7 +473,7 @@
                                     <constraint firstAttribute="height" constant="500" id="2S6-D1-3wi"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCellIdentifier" rowHeight="350" id="Ycl-ea-Mjt" customClass="PostsTableViewCell" customModule="BlogConnect" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCellHomePage" rowHeight="350" id="Ycl-ea-Mjt" customClass="PostsCellWithoutDelete" customModule="BlogConnect" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="341" height="350"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ycl-ea-Mjt" id="qAB-Io-lbi">
@@ -522,21 +522,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsy-hl-Lwr">
-                                                    <rect key="frame" x="223.00000000000003" y="389" width="97.333333333333343" height="34.333333333333314"/>
-                                                    <color key="tintColor" systemColor="systemRedColor"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" image="trash" catalog="system" title="Delete"/>
-                                                    <connections>
-                                                        <action selector="deleteButtonTapped:" destination="Ycl-ea-Mjt" eventType="touchUpInside" id="gSe-BK-6JS"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="separatorColor"/>
                                             <constraints>
                                                 <constraint firstItem="LlX-bn-fIQ" firstAttribute="trailing" secondItem="ZsX-0D-RLK" secondAttribute="trailing" id="0gy-aH-2gc"/>
                                                 <constraint firstItem="ndW-4y-vTX" firstAttribute="top" secondItem="V0V-WV-wVG" secondAttribute="bottom" constant="1" id="5uO-BM-5U0"/>
-                                                <constraint firstItem="nsy-hl-Lwr" firstAttribute="top" secondItem="JC7-n2-0hm" secondAttribute="bottom" constant="50" id="6h5-cU-cfX"/>
                                                 <constraint firstItem="LlX-bn-fIQ" firstAttribute="top" secondItem="qAB-Io-lbi" secondAttribute="topMargin" id="8F3-dy-TyW"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="JC7-n2-0hm" secondAttribute="bottom" id="8Go-fr-0EV"/>
                                                 <constraint firstItem="LlX-bn-fIQ" firstAttribute="trailing" secondItem="qAB-Io-lbi" secondAttribute="trailingMargin" id="Fl2-b6-9Qe"/>
@@ -544,14 +534,12 @@
                                                 <constraint firstItem="ZsX-0D-RLK" firstAttribute="leading" secondItem="ndW-4y-vTX" secondAttribute="leading" id="K0f-VA-M9P"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="JC7-n2-0hm" secondAttribute="trailing" id="NYv-wW-cyl"/>
                                                 <constraint firstItem="ndW-4y-vTX" firstAttribute="top" secondItem="ZsX-0D-RLK" secondAttribute="bottom" constant="36" id="OnA-4S-8gv"/>
-                                                <constraint firstItem="nsy-hl-Lwr" firstAttribute="leading" secondItem="qAB-Io-lbi" secondAttribute="leading" constant="223.00000000000003" id="PHc-wi-eU3"/>
                                                 <constraint firstItem="JC7-n2-0hm" firstAttribute="top" secondItem="ndW-4y-vTX" secondAttribute="bottom" id="aX2-19-dgQ"/>
                                                 <constraint firstItem="ndW-4y-vTX" firstAttribute="leading" secondItem="JC7-n2-0hm" secondAttribute="leading" id="cPy-uk-Pj1"/>
                                                 <constraint firstItem="ZsX-0D-RLK" firstAttribute="top" secondItem="LlX-bn-fIQ" secondAttribute="bottom" constant="8" id="fxh-JC-2Mq"/>
                                                 <constraint firstItem="LlX-bn-fIQ" firstAttribute="leading" secondItem="qAB-Io-lbi" secondAttribute="leadingMargin" id="jve-xk-Nl9"/>
                                                 <constraint firstItem="V0V-WV-wVG" firstAttribute="top" secondItem="ZsX-0D-RLK" secondAttribute="bottom" constant="8" id="l1m-vo-9E9"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="V0V-WV-wVG" secondAttribute="trailing" constant="20" symbolic="YES" id="lFI-z9-nnm"/>
-                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="nsy-hl-Lwr" secondAttribute="trailing" id="lvS-MT-7A2"/>
                                                 <constraint firstItem="ZsX-0D-RLK" firstAttribute="trailing" secondItem="ndW-4y-vTX" secondAttribute="trailing" id="vT2-Qt-1d2"/>
                                                 <constraint firstItem="V0V-WV-wVG" firstAttribute="leading" secondItem="ndW-4y-vTX" secondAttribute="leading" id="w6Y-ur-AlA"/>
                                             </constraints>
@@ -564,12 +552,11 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="dateLBL" destination="V0V-WV-wVG" id="qhk-S8-qqR"/>
-                                            <outlet property="deleteButton" destination="nsy-hl-Lwr" id="C2n-wS-gBG"/>
-                                            <outlet property="descrLBL" destination="JC7-n2-0hm" id="Ug4-xZ-RkS"/>
-                                            <outlet property="tagsLBL" destination="ndW-4y-vTX" id="ZOD-YB-5YF"/>
-                                            <outlet property="titleLBL" destination="LlX-bn-fIQ" id="VzL-pI-kkK"/>
-                                            <outlet property="userNameLBL" destination="ZsX-0D-RLK" id="0hE-hJ-PdE"/>
+                                            <outlet property="dateLBL" destination="V0V-WV-wVG" id="thO-Es-DOl"/>
+                                            <outlet property="descrLBL" destination="JC7-n2-0hm" id="h7y-CU-zqh"/>
+                                            <outlet property="tagsLBL" destination="ndW-4y-vTX" id="Puj-gh-LMa"/>
+                                            <outlet property="titleLBL" destination="LlX-bn-fIQ" id="Kew-YO-5Fi"/>
+                                            <outlet property="userNameLBL" destination="ZsX-0D-RLK" id="nQc-cz-N6m"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
