@@ -181,9 +181,15 @@ class LoginViewController: UIViewController{
                 self.showAlertWithOk(title: "Sign In Error", message: error.localizedDescription, okAction: nil)
                 return
             }
+            if authResult?.user.displayName?.isEmpty==false{
+                SceneDelegate.showHome()
+            }
+       
             self.showUsernameInputDialog { username in
                         guard let currentUser = Auth.auth().currentUser else { return }
-                        
+                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                changeRequest?.displayName = username
+                changeRequest?.commitChanges()
                         // Create user data
                         let user = User(uid: currentUser.uid, username: username)
                         let userDict = user.toDictionary()
@@ -224,7 +230,7 @@ extension UIViewController{
             }
             
             let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
-                if let username = alert.textFields?.first?.text, !username.isEmpty {
+                if let username = alert.textFields?.first?.text, !username.isEmpty,!username.trimmingCharacters(in: .whitespaces).isEmpty {
                     onSave(username)
                 } else {
                     self.showAlertWithOk(title: "Error", message: "Username cannot be empty", okAction: nil)

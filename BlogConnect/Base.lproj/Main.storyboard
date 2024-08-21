@@ -77,31 +77,31 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="baq-ox-6Rt"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" image="firebaseIcon" title="Sign In"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="logo" title="Sign In   "/>
                                                 <connections>
                                                     <action selector="loginClicked:" destination="b5B-gY-Yq4" eventType="touchUpInside" id="4XX-Hk-smW"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rM-bX-p6C">
-                                                <rect key="frame" x="24.666666666666664" y="69" width="102.66666666666669" height="30"/>
+                                                <rect key="frame" x="0.3333333333333286" y="69" width="151" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="79" id="Te4-ak-gKJ"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="151" id="Te4-ak-gKJ"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="o0d-lh-5Fo"/>
                                                     <constraint firstAttribute="height" constant="30" id="wdc-9A-OVY"/>
                                                 </constraints>
                                                 <color key="tintColor" systemColor="systemIndigoColor"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" image="Google" title="Google"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="google.png" title="Google"/>
                                                 <connections>
                                                     <action selector="GoogleSignInClicked:" destination="b5B-gY-Yq4" eventType="touchUpInside" id="l1C-kj-zIe"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmB-hZ-8ix">
-                                                <rect key="frame" x="26.999999999999979" y="128" width="97.666666666666686" height="30"/>
+                                                <rect key="frame" x="0.3333333333333286" y="128" width="151" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="5XU-GJ-Cba"/>
                                                     <constraint firstAttribute="height" constant="30" id="LP0-rt-KDi"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="79" id="XAm-bp-Fxw"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="151" id="XAm-bp-Fxw"/>
                                                 </constraints>
                                                 <color key="tintColor" systemColor="systemIndigoColor"/>
                                                 <state key="normal" title="Button"/>
@@ -111,10 +111,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9k-su-A5m">
-                                                <rect key="frame" x="33.999999999999986" y="187" width="84" height="30"/>
+                                                <rect key="frame" x="0.3333333333333286" y="187" width="151" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Bfx-58-d0P"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="79" id="pGT-B2-F3G"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="151" id="pGT-B2-F3G"/>
                                                     <constraint firstAttribute="height" constant="30" id="s7z-hW-CGm"/>
                                                 </constraints>
                                                 <color key="tintColor" systemColor="systemCyanColor"/>
@@ -760,9 +760,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Google" width="24" height="24"/>
         <image name="background image" width="4000" height="9000"/>
-        <image name="firebaseIcon" width="24" height="24"/>
+        <image name="google.png" width="18" height="18"/>
+        <image name="logo" width="24" height="24"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <image name="phone" catalog="system" width="128" height="115"/>

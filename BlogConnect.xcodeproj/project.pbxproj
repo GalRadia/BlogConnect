@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B2359FDF2C73AEF300948ECA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2359FDE2C73AEF300948ECA /* GoogleService-Info.plist */; };
 		B2359FE32C73B35600948ECA /* PostsCellWithoutDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2359FE22C73B35600948ECA /* PostsCellWithoutDelete.swift */; };
 		EF6231AE2C5E1A0300125F38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6231AD2C5E1A0300125F38 /* AppDelegate.swift */; };
 		EF6231B02C5E1A0300125F38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6231AF2C5E1A0300125F38 /* SceneDelegate.swift */; };
@@ -29,11 +28,11 @@
 		EFF2FF4C2C6616A500E19C55 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EFF2FF4B2C6616A500E19C55 /* FirebaseFirestore */; };
 		FB0FF4752C60D04A0055ADE1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FB0FF4742C60D04A0055ADE1 /* FirebaseFirestore */; };
 		FB0FF4772C60D1C00055ADE1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FB0FF4762C60D1C00055ADE1 /* FirebaseFirestore */; };
+		FB12F3412C75CF4F00174CE5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB12F3402C75CF4F00174CE5 /* GoogleService-Info.plist */; };
 		FB419D0C2C60E682009BB00B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB419D0B2C60E682009BB00B /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B2359FDE2C73AEF300948ECA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B2359FE22C73B35600948ECA /* PostsCellWithoutDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsCellWithoutDelete.swift; sourceTree = "<group>"; };
 		EF6231AA2C5E1A0300125F38 /* BlogConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlogConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6231AD2C5E1A0300125F38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		EF9CAC442C692FB80063168D /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		EF9CAC452C692FB80063168D /* PostsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
 		EF9CAC492C692FC80063168D /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		FB12F3402C75CF4F00174CE5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB419D0B2C60E682009BB00B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,7 +90,7 @@
 		EF6231AC2C5E1A0300125F38 /* BlogConnect */ = {
 			isa = PBXGroup;
 			children = (
-				B2359FDE2C73AEF300948ECA /* GoogleService-Info.plist */,
+				FB12F3402C75CF4F00174CE5 /* GoogleService-Info.plist */,
 				EF6231AD2C5E1A0300125F38 /* AppDelegate.swift */,
 				EF6231AF2C5E1A0300125F38 /* SceneDelegate.swift */,
 				EF6231B32C5E1A0300125F38 /* Main.storyboard */,
@@ -191,7 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF6231B72C5E1A0400125F38 /* Assets.xcassets in Resources */,
-				B2359FDF2C73AEF300948ECA /* GoogleService-Info.plist in Resources */,
+				FB12F3412C75CF4F00174CE5 /* GoogleService-Info.plist in Resources */,
 				EF6231BA2C5E1A0400125F38 /* Base in Resources */,
 				EF6231B52C5E1A0300125F38 /* Base in Resources */,
 			);
