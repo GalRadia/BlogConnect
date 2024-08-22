@@ -1,4 +1,7 @@
+//Gal and Tzachi
+
 import Foundation
+
 
 // Define the enum for categories
 enum Category: String {
@@ -27,7 +30,7 @@ class Post {
         self.userName = userName
         self.timestamp = timestamp
     }
-
+    //Gal
     // Convert Post object to dictionary
     func toDictionary() -> [String: Any] {
         return [
@@ -40,6 +43,7 @@ class Post {
         ]
     }
 
+    //Tzachi
     // Static method to create a Post object from a dictionary
     static func fromDictionary(_ dictionary: [String: Any]) -> Post? {
         guard let idString = dictionary["id"] as? String,

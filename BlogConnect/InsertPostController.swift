@@ -1,7 +1,5 @@
-//
-//  HomeViewController.swift
-//  BlogConnect
-//
+
+//Gal
 //
 
 import UIKit
@@ -9,7 +7,7 @@ import FirebaseAuth
 import FirebaseDatabase
 import FirebaseFirestore
 
-class HomeViewController: UIViewController{
+class InsertPostController: UIViewController{
     @IBOutlet weak var descTextField: UITextView!
     @IBOutlet weak var categoriesTags: UISegmentedControl!
     @IBOutlet weak var titleTextField: UITextField!

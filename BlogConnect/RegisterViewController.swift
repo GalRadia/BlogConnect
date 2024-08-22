@@ -2,7 +2,7 @@
 //  RegisterViewController.swift
 //  BlogConnect
 //
-//
+// Gal
 
 import UIKit
 import FirebaseAuth

@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background image" translatesAutoresizingMaskIntoConstraints="NO" id="hQc-0l-7Nr" userLabel="Background">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background image" translatesAutoresizingMaskIntoConstraints="NO" id="hQc-0l-7Nr" userLabel="Background">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="5cr-71-kfM">
                                 <rect key="frame" x="68.333333333333343" y="103" width="256.33333333333326" height="646"/>
@@ -27,7 +26,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Hk0-zs-FI9">
                                         <rect key="frame" x="1.6666666666666856" y="0.0" width="253" height="90"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pt5-XN-ma2">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blog" translatesAutoresizingMaskIntoConstraints="NO" id="Pt5-XN-ma2">
                                                 <rect key="frame" x="0.0" y="0.0" width="253" height="90"/>
                                             </imageView>
                                         </subviews>
@@ -133,6 +132,7 @@
                                     <constraint firstItem="Hk0-zs-FI9" firstAttribute="leading" secondItem="5cr-71-kfM" secondAttribute="leading" constant="1.6666666666666572" id="QR4-JS-Td9"/>
                                     <constraint firstItem="jzL-2H-VyR" firstAttribute="leading" secondItem="5cr-71-kfM" secondAttribute="leading" id="Wr6-TV-bbx"/>
                                     <constraint firstItem="oKT-PF-cYd" firstAttribute="leading" secondItem="5cr-71-kfM" secondAttribute="leading" constant="52.333333333333329" id="mLY-fx-rh4"/>
+                                    <constraint firstItem="nPL-DA-SVe" firstAttribute="top" secondItem="5cr-71-kfM" secondAttribute="top" constant="155" id="re8-pQ-c0L"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -141,8 +141,12 @@
                         <constraints>
                             <constraint firstItem="5cr-71-kfM" firstAttribute="centerY" secondItem="VyW-su-r2j" secondAttribute="centerY" id="5Pl-2S-1Jw"/>
                             <constraint firstItem="wXq-D7-y2I" firstAttribute="trailing" secondItem="5cr-71-kfM" secondAttribute="trailing" constant="68.333333333333314" id="GH4-iy-Lk3"/>
+                            <constraint firstAttribute="bottom" secondItem="hQc-0l-7Nr" secondAttribute="bottom" id="Lyt-Qr-Ut3"/>
+                            <constraint firstAttribute="trailing" secondItem="hQc-0l-7Nr" secondAttribute="trailing" id="UOB-WD-F2n"/>
                             <constraint firstItem="5cr-71-kfM" firstAttribute="centerX" secondItem="VyW-su-r2j" secondAttribute="centerX" id="enQ-96-6O8"/>
                             <constraint firstItem="5cr-71-kfM" firstAttribute="top" secondItem="wXq-D7-y2I" secondAttribute="top" id="gQy-cd-fH6"/>
+                            <constraint firstItem="hQc-0l-7Nr" firstAttribute="leading" secondItem="VyW-su-r2j" secondAttribute="leading" id="om9-NR-GwI"/>
+                            <constraint firstItem="hQc-0l-7Nr" firstAttribute="top" secondItem="VyW-su-r2j" secondAttribute="top" id="w8G-na-XbL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xvC-qF-Wzc"/>
@@ -190,18 +194,18 @@
                                 <rect key="frame" x="68.333333333333343" y="121" width="256.33333333333326" height="610"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jcF-0P-S2i">
-                                        <rect key="frame" x="7.333333333333357" y="0.0" width="241.66666666666663" height="108"/>
+                                        <rect key="frame" x="7.333333333333357" y="0.0" width="241.66666666666663" height="142"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="umV-ji-For">
-                                                <rect key="frame" x="0.0" y="0.0" width="241.66666666666666" height="108"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blog" translatesAutoresizingMaskIntoConstraints="NO" id="umV-ji-For">
+                                                <rect key="frame" x="0.0" y="0.0" width="241.66666666666666" height="142"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="r91-ZF-et8">
-                                        <rect key="frame" x="64.666666666666686" y="182" width="127" height="76"/>
+                                        <rect key="frame" x="64.666666666666686" y="216" width="127" height="42"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjj-7L-bIv">
-                                                <rect key="frame" x="0.0" y="0.0" width="127" height="76"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="127" height="42"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -239,7 +243,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="i06-am-i8b"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -265,6 +269,7 @@
                                 <constraints>
                                     <constraint firstItem="r91-ZF-et8" firstAttribute="leading" secondItem="KXH-tq-QyZ" secondAttribute="leading" constant="64.666666666666657" id="2aw-e9-nTn"/>
                                     <constraint firstItem="rga-62-DNJ" firstAttribute="leading" secondItem="KXH-tq-QyZ" secondAttribute="leading" constant="52.333333333333329" id="FMe-Ie-AVP"/>
+                                    <constraint firstItem="r91-ZF-et8" firstAttribute="top" secondItem="KXH-tq-QyZ" secondAttribute="top" constant="216" id="Hx0-5V-kzP"/>
                                     <constraint firstItem="jcF-0P-S2i" firstAttribute="leading" secondItem="KXH-tq-QyZ" secondAttribute="leading" constant="7.3333333333333286" id="VB0-87-v6n"/>
                                     <constraint firstItem="GMK-s1-4ej" firstAttribute="leading" secondItem="KXH-tq-QyZ" secondAttribute="leading" id="mJB-Nz-DwL"/>
                                 </constraints>
@@ -274,13 +279,17 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="r7C-fK-UYG" firstAttribute="leading" secondItem="Plk-m9-OXY" secondAttribute="leading" id="JvX-wd-q4q"/>
+                            <constraint firstAttribute="bottom" secondItem="r7C-fK-UYG" secondAttribute="bottom" id="NBu-EN-u0U"/>
+                            <constraint firstItem="r7C-fK-UYG" firstAttribute="top" secondItem="Plk-m9-OXY" secondAttribute="top" id="S6x-iD-mH3"/>
                             <constraint firstItem="KXH-tq-QyZ" firstAttribute="centerX" secondItem="Plk-m9-OXY" secondAttribute="centerX" id="UZN-LD-LlO"/>
+                            <constraint firstAttribute="trailing" secondItem="r7C-fK-UYG" secondAttribute="trailing" id="VQN-GT-KBP"/>
                             <constraint firstAttribute="trailing" secondItem="r7C-fK-UYG" secondAttribute="trailing" id="ZV1-P6-bsC"/>
                             <constraint firstItem="0gb-kp-AvG" firstAttribute="trailing" secondItem="KXH-tq-QyZ" secondAttribute="trailing" constant="68.333333333333314" id="d6C-XP-52u"/>
                             <constraint firstItem="r7C-fK-UYG" firstAttribute="top" secondItem="Plk-m9-OXY" secondAttribute="top" id="hN5-xO-BcT"/>
                             <constraint firstItem="KXH-tq-QyZ" firstAttribute="top" secondItem="0gb-kp-AvG" secondAttribute="top" constant="18" id="iZu-gK-pSM"/>
                             <constraint firstItem="r7C-fK-UYG" firstAttribute="top" secondItem="Plk-m9-OXY" secondAttribute="top" id="kbj-Bn-hrv"/>
                             <constraint firstItem="KXH-tq-QyZ" firstAttribute="centerY" secondItem="Plk-m9-OXY" secondAttribute="centerY" id="oqI-6h-c6c"/>
+                            <constraint firstItem="r7C-fK-UYG" firstAttribute="leading" secondItem="Plk-m9-OXY" secondAttribute="leading" id="pVe-6f-ykI"/>
                             <constraint firstAttribute="trailing" secondItem="r7C-fK-UYG" secondAttribute="trailing" id="s6r-Jx-mfi"/>
                             <constraint firstAttribute="bottom" secondItem="r7C-fK-UYG" secondAttribute="bottom" id="sXA-Yc-ofA"/>
                         </constraints>
@@ -303,7 +312,7 @@
         <!--Home-->
         <scene sceneID="Jic-7p-MH1">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" title="Home" id="LmS-hh-Y66" customClass="HomeViewController" customModule="BlogConnect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" title="Home" id="LmS-hh-Y66" customClass="InsertPostController" customModule="BlogConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="26F-MS-eiX">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -761,6 +770,7 @@
     </scenes>
     <resources>
         <image name="background image" width="4000" height="9000"/>
+        <image name="blog" width="1600" height="1001"/>
         <image name="google.png" width="18" height="18"/>
         <image name="logo" width="24" height="24"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>

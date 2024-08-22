@@ -2,8 +2,7 @@
 //  User.swift
 //  BlogConnect
 //
-//  Created by Student17 on 05/08/2024.
-//
+// Gal
 
 import Foundation
 
