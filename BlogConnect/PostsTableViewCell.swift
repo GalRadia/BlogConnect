@@ -37,7 +37,7 @@ class PostsTableViewCell: UITableViewCell {
            }
        }
 
-    // Method to configure the cell with a Post object and control the visibility of the delete button
+
     func configure(with post: Post, showDeleteButton: Bool) {
         titleLBL.text = post.title
         userNameLBL.text = post.userName
@@ -57,6 +57,6 @@ class PostsTableViewCell: UITableViewCell {
 
     // Action method for the delete button
     @IBAction func deleteButtonTapped(_ sender: UIButton) {
-        onDeleteButtonTapped?() // Trigger the delete action
+        onDeleteButtonTapped?() 
     }
 }

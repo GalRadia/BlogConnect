@@ -3,16 +3,13 @@
 import Foundation
 
 
-// Define the enum for categories
 enum Category: String {
     case Cooking
     case News
     case Leisure
     case Adventure
-    // Add other categories as needed
 }
 
-// Define the Post class
 class Post {
     var id: UUID
     var title: String
@@ -21,7 +18,6 @@ class Post {
     var userName: String
     var timestamp: Date  // Add a timestamp to record the post's creation date
 
-    // Initializer to create a Post object
     init(id: UUID = UUID(), title: String, description: String, category: Category, userName: String, timestamp: Date = Date()) {
         self.id = id
         self.title = title

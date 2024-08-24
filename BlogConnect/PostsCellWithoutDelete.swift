@@ -16,7 +16,6 @@ class PostsCellWithoutDelete: UITableViewCell {
     
     override func awakeFromNib() {
             super.awakeFromNib()
-            // Configure the cell's UI elements
             titleLBL.font = UIFont.boldSystemFont(ofSize: 18)
             descrLBL.numberOfLines = 0
             self.contentView.layer.cornerRadius = 10

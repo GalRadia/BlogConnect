@@ -91,15 +91,11 @@ class MyProfileViewController: UIViewController, UITableViewDelegate, UITableVie
                         } else {
                             print("Post ID removed from user's post list successfully")
                             
-                            // Check if indexPath.row is still valid before removing the post
                             if indexPath.row < self.posts.count {
-                                // Remove the post from the local data source
                                 self.posts.remove(at: indexPath.row)
                                 
-                                // Reload the entire table view
                                 self.tableView.reloadData()
                                 
-                                // Optionally refresh posts from Firebase
                                 self.fetchUserPosts()
                             } else {
                                 print("Index out of range - post has already been removed.")
@@ -111,12 +107,6 @@ class MyProfileViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
 
-
-
-
-
-
-        // Method to fetch posts of the current user from Firebase
         func fetchUserPosts() {
             guard let currentUser = Auth.auth().currentUser else {
                 print("No current user is authenticated")
@@ -147,7 +137,6 @@ class MyProfileViewController: UIViewController, UITableViewDelegate, UITableVie
             }
         }
         
-        // Logout the current user and perform segue to LoginViewController
         @IBAction func logoutButtonTapped(_ sender: UIButton) {
             do {
                 try Auth.auth().signOut()
