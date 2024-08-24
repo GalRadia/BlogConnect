@@ -38,3 +38,18 @@ Install dependencies with Swift Package Manager
 
 Log in using any of the supported methods, create, read, and manage posts through an intuitive interface designed for ease of use.
 
+## Screenshots
+
+### Login
+<img src="https://github.com/user-attachments/assets/f15b0f25-a1a1-4b26-90ae-b84adac0fc88" alt="התחברות" width="350" height="700">
+
+### Home Page
+<img src="https://github.com/user-attachments/assets/862eaec1-908f-4df2-a6fa-840af9af2dc4" alt="home" width="350" height="700">
+
+### Add post
+<img src="https://github.com/user-attachments/assets/e44d12e5-d156-4d78-ad05-7f37181c1db9" alt="הוספת פוסט" width="350" height="700">
+
+### My profile
+<img src="https://github.com/user-attachments/assets/25f82959-2676-4c52-b0ec-317c153dd1ed" alt="הפרופיל שלי" width="350" height="700">
+
+
